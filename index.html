@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="onui.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="onui.css">
+    <title>OnUI - Sample</title>
+</head>
+
+<body>
+    <input id="contentslist-open" type="checkbox">
+    <label id="contentslist-open-button" for="contentslist-open"></label>
+    <div id="contentslist">
+        <ul>
+            <li><a href="#instllation">Instllation</a></li>
+            <li><a href="#use">Usage</a></li>
+            <ul>
+                <li><a href="#toggle-sw">Toggle Switch</a></li>
+                <li><a href="#toggle-btn">Toggle Button</a></li>
+                <li><a href="#slider">Multi Slider</a></li>
+                <li><a href="#font-selector">Font Selector</a></li>
+                <li><a href="#accordion-menu">Accordion Menu</a></li>
+                <li><a href="#tab-menu">Tab Menu</a></li>
+            </ul>
+
+            <li><a href="#event">Event Lisnter</a></li>
+            <ul>
+                <li><a href="#ex-cvs">Canvas</a></li>
+                <li><a href="#ex-d3js">D3.js</a></li>
+            </ul>
+        </ul>
+
+        <div><a href="https://github.com/tomoya-onuki/tra.js" target="_blank">GitHub</a></div>
+        <div style="font-size: 60%;">&copy; 2023 Tomoya Onuki.</div>
+    </div>
+
+    <div id="main">
+        <h1>onUI</h1>
+        <p>The onUI is a library that allows you to easily install UI components by simply adding classes to html.</p>
+
+        <h2 id="instllation">Instllation</h2>
+
+        <h2 id="use">Usage</h2>
+        <div>
+            <div>Just load the css and js.</div>
+            <code><pre>&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;onui.css&quot;&gt;
+    &lt;script src=&quot;onui.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</pre></code>
+        </div>
+
+        <div>
+            <h3 id="toggle-sw">Toggle Switch</h3>
+            <input type="checkbox" id="toggle" class="onui-toggle-switch">
+            <label for="toggle">Toggle Switch</label>
+
+            <code><pre>&lt;input type="checkbox" id="toggle" class="onui-toggle-switch"&gt;
+&lt;label for="toggle"&gt;Toggle&lt;/label&gt;</pre></code>
+        </div>
+
+        <div>
+            <h3 id="toggle-btn">Toggle Button</h3>
+            <div class="onui-toggle-btn">Toggle Button</div>
+            <code><pre>&lt;div class=&quot;onui-toggle-btn&quot;&gt;Toggle Button&lt;/div&gt;</pre></code>
+        </div>
+
+        <div>
+            <h3 id="slider">Multi Slider</h3>
+            <input type="range" id="slider" class="onui-multi-slider">
+
+            <code><pre>&lt;input type=&quot;range&quot; id=&quot;slider&quot; class=&quot;onui-multi-slider&quot;&gt;</pre></code>
+        </div>
+
+
+        <div>
+            <h3 id="font-selector">Font Selector</h3>
+            <div id="font-selector" class="onui-font-selector">
+                <option name="sans-serif"></option>
+                <option name="serif"></option>
+                <option name="Arial"></option>
+                <option name="Times New Roman"></option>
+            </div>
+
+            <code><pre>&lt;div id=&quot;font-selector&quot; class=&quot;onui-font-selector&quot;&gt;
+    &lt;option name=&quot;sans-serif&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;serif&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;Arial&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;Times New Roman&quot;&gt;&lt;/option&gt;
+&lt;/div&gt;</pre></code>
+        </div>
+
+
+        <div>
+            <h3 id="accordion-menu">Accordion Menu</h3>
+            <div id="accordion" class="onui-accordion">
+                <option name="Item0">sample0 sample0 sample0 sample0 sample0</option>
+                <option name="Item1">sample1 sample1 sample1 sample1 sample1</option>
+                <option name="Item2">sample2 sample2 sample2 sample2 sample2</option>
+            </div>
+
+            <code><pre>&lt;div id=&quot;accordion&quot; class=&quot;onui-accordion&quot;&gt;
+    &lt;option name=&quot;Item0&quot;&gt;sample0 sample0 sample0 sample0 sample0&lt;/option&gt;
+    &lt;option name=&quot;Item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/option&gt;
+    &lt;option name=&quot;Item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/option&gt;
+&lt;/div&gt;</pre></code>
+        </div>
+
+        <div>
+            <h3 id="tab-menu">Tab Menu</h3>
+            <div id="tab" class="onui-tab">
+                <option name="Item0">sample0 sample0 sample0 sample0 sample0</option>
+                <option name="Item1">sample1 sample1 sample1 sample1 sample1</option>
+                <option name="Item2">sample2 sample2 sample2 sample2 sample2</option>
+            </div>
+
+            <code><pre>&lt;div id=&quot;tab&quot; class=&quot;onui-tab&quot;&gt;
+    &lt;option name=&quot;Item0&quot;&gt;sample0 sample0 sample0 sample0 sample0&lt;/option&gt;
+    &lt;option name=&quot;Item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/option&gt;
+    &lt;option name=&quot;Item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/option&gt;
+&lt;/div&gt;</pre></code>
+        </div>
+
+
+        <div>
+            <h2 id="event">Event Listner</h2>
+
+            <div>
+                <input type="checkbox" id="mytoggle" class="onui-toggle-switch">
+                <label for="mytoggle">My Toggle Switch</label>
+                <div id="mytoggle-console">false</div>
+
+                <!-- <code><pre>
+                    &lt;input type=&quot;checkbox&quot; id=&quot;mytoggle&quot; class=&quot;onui-toggle-switch&quot;&gt;
+                    &lt;label for=&quot;mytoggle&quot;&gt;My Toggle Switch&lt;/label&gt;
+                    &lt;div id=&quot;mytoggle-console&quot;&gt;false&lt;/div&gt;
+                </pre></code>
+                <code><pre>document.querySelector('#mytoggle').addEventListener('input', (e) => {
+        document.querySelector('#mytoggle-console').textContent = e.target.checked;
+});</pre></code> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
