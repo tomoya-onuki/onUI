@@ -1,3 +1,6 @@
+/* Copyright (c) 2023 Tomoya Onuki */
+/* This software is released under the MIT License, see LICENSE. */
+
 window.addEventListener('load', () => {
     new OnUI().init();
 });
