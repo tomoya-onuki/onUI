@@ -1,16 +1,16 @@
 /* toggle switch */
-onui-toggle-switch-box {
+onui[type="toggle-switch"] {
     display: inline-block;
     transform: translate(0, 4px);
     margin: 0 2px 0 2px;
     width: 30px;
 }
 
-onui-toggle-switch-box input[type="checkbox"] {
+onui[type="toggle-switch"] input[type="checkbox"] {
     display: none;
 }
 
-onui-toggle-switch-box input[type="checkbox"]+label.check {
+onui[type="toggle-switch"] input[type="checkbox"]+label {
     position: relative;
     cursor: pointer;
     display: inline-block;
@@ -21,14 +21,14 @@ onui-toggle-switch-box input[type="checkbox"]+label.check {
     border-radius: 10px;
 }
 
-onui-toggle-switch-box input[type="checkbox"]:checked+label.check {
+onui[type="toggle-switch"] input[type="checkbox"]:checked+label {
     border: 1px solid #4287f5;
     background-color: #4287f5;
     border-radius: 15px;
 }
 
 /* トグル部品 */
-onui-toggle-switch-box input[type="checkbox"]+label.check>onui-thumb {
+onui[type="toggle-switch"] input[type="checkbox"]+label>onui-thumb {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -40,7 +40,7 @@ onui-toggle-switch-box input[type="checkbox"]+label.check>onui-thumb {
     transition: 0.2s;
 }
 
-onui-toggle-switch-box input[type="checkbox"]:checked+label.check>onui-thumb {
+onui[type="toggle-switch"] input[type="checkbox"]:checked+label>onui-thumb {
     border: 1px solid transparent;
     transform: translate(100%);
 }
@@ -48,16 +48,16 @@ onui-toggle-switch-box input[type="checkbox"]:checked+label.check>onui-thumb {
 
 
 /* toggle button */
-onui-toggle-btn-box {
+onui[type="toggle-btn"] {
     display: inline-block;
     transform: translate(0, 1px);
 }
 
-onui-toggle-btn-box input[type="checkbox"] {
+onui[type="toggle-btn"] input[type="checkbox"] {
     display: none;
 }
 
-onui-toggle-btn-box input[type="checkbox"]+label.check {
+onui[type="toggle-btn"] input[type="checkbox"]+label {
     background: #FFF;
     color: #000;
     border: solid 1px #666;
@@ -77,10 +77,10 @@ onui-toggle-btn-box input[type="checkbox"]+label.check {
     user-select: none;
 }
 
-onui-toggle-btn-box input[type="checkbox"]:checked+label.check {
+onui[type="toggle-btn"] input[type="checkbox"]:checked+label {
     background: #4287f5;
     color: #FFF;
-    border: solid 1px #4287f5;
+    border-color:  #4287f5;
 }
 
 .onui-toggle-btn:hover {
@@ -91,9 +91,9 @@ onui-toggle-btn-box input[type="checkbox"]:checked+label.check {
 
 
 /* font selector */
-onui-font-selector-box {
+onui[type="font"] {
     user-select: none;
-    width: 137px;
+    width: 120px;
     min-width: 20px;
     height: 22px;
     line-height: 20px;
@@ -103,12 +103,12 @@ onui-font-selector-box {
     display: inline-block;
     background: #FFF;
     border-radius: 5px;
-    border: 1px solid #666;
+    border: 1px solid #000;
     position: relative;
     /* transform: translate(0, 6px); */
 }
 
-onui-font-selector-box onui-list {
+onui[type="font"] onui-options {
     display: none;
     background: #f5f5f5;
     font-size: 90%;
@@ -117,28 +117,28 @@ onui-font-selector-box onui-list {
     top: -2px;
     left: -2px;
     z-index: 10;
-    width: 160px;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 
-onui-font-selector-box .onui-item {
+onui[type="font"] .onui-item {
     text-align: left;
     display: block;
     padding: 0 2px 0 10px;
     border-radius: 3px;
 }
 
-onui-font-selector-box .onui-item:hover {
+onui[type="font"] .onui-item:hover {
     background: #4287f5;
     color: #FFF;
 }
 
-onui-font-selector-box input[type='radio'] {
+onui[type="font"] input[type='radio'] {
     display: none;
 }
 
-onui-font-selector-box onui-label {
+onui[type="font"] onui-label {
     -webkit-user-appearance: none;
     -moz-user-appearance: none;
     -ms-user-appearance: none;
@@ -158,109 +158,130 @@ onui-font-selector-box onui-label {
     cursor: pointer;
 }
 
-onui-font-selector-box label:hover {
-    opacity: 0.onui-5;
+onui[type="font"] label:hover {
+    opacity: 0.5;
 }
 
-onui-font-selector-box onui-down-btn {
+onui[type="font"] onui-down-btn {
     position: absolute;
     top: 1px;
     /* left: 113px; */
     right: 5px;
-    color: #444;
+    color: #000;
     cursor: pointer;
 }
 
 
 /* アコーディオン */
-onui-accordion-box {
+onui[type="accordion"] {
     user-select: none;
     width: 200px;
     display: inline-block;
+    margin: 0 0 10px 0;
 }
 
-onui-accordion-box label {
+onui[type="accordion"] label {
     display: block;
     position: relative;
     margin: 0;
     border: #666 1px solid;
+    background-color: #FFF;
+    color: #000;
     width: calc(100% - 12px);
     padding: 2px 5px;
     cursor: pointer;
 }
 
-onui-accordion-box label:hover {
+onui[type="accordion"] label:hover {
     background: #eee;
 }
 
-onui-accordion-box onui-hide-btn {
+onui[type="accordion"] onui-hide-btn {
     display: inline;
     color: #444;
     float: right;
     margin: 0 2px 0 6px;
 }
 
-onui-accordion-box .onui-accordion-item {
-    margin: 0 0 10px 0;
-    width: 100%;
+onui[type="accordion"] .onui-accordion-item {
+    padding: 10px 5px;
+    width: calc(100% - 10px);
     height: auto;
 }
 
-onui-accordion-box input[type="checkbox"] {
+onui[type="accordion"] input[type="checkbox"] {
     display: none;
 }
 
 
 /* タブ */
-onui-tab-box {
+onui[type="tab"] {
     user-select: none;
+    display: inline-block;
+    width: 300px;
+    height: auto;
 }
 
-onui-tab-box onui-selector-box {
-    display: inline;
+onui[type="tab"] onui-selectors {
+    position: relative;
+    width: 100%;
 }
 
-onui-tab-box onui-selector-box label {
-    padding: 8px 20px;
+onui[type="tab"] onui-selector-box {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+onui[type="tab"] onui-selector-box label {
+    position: relative;
+    display: inline-block;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
+    width: auto;
+    height: 20px;
+    padding: 5px 10px 2px 10px;
+    text-align: center;
 }
 
-onui-tab-box onui-selector-box input[type='radio']+label.onui-tab-label {
+onui[type="tab"] onui-selector-box input[type='radio']+label {
     border: none 1px;
     border-bottom: #444 1px solid;
 }
 
-onui-tab-box onui-selector-box input[type='radio']:checked+label.onui-tab-label {
+onui[type="tab"] onui-selector-box input[type='radio']:checked+label {
     border: none 1px;
     border-top: #444 1px solid;
     border-right: #444 1px solid;
     border-left: #444 1px solid;
 }
 
-onui-tab-box onui-selector-box input[type='radio'] {
+onui[type="tab"] onui-selector-box input[type='radio'] {
     display: none;
 }
 
-onui-tab-box .onui-tab-item {
-    margin: 10px 0;
+onui[type="tab"] option {
+    margin: 5px 0;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space:pre-wrap;
 }
-onui-tab-box onui-selectors {
+onui[type="tab"] onui-selectors {
     display: block;
 }
 
 
 /* マルチスライダー */
-onui-mulitslider-box {
+onui[type="range"] {
     position: relative;
-    width: 129px;
+    width: 120px;
     height: 15px;
     margin: 0;
     display: inline-block;
 }
 
-onui-mulitslider-box .primary,
-onui-mulitslider-box .secondary {
+onui[type="range"] .onui-min,
+onui[type="range"] .onui-max {
     -webkit-appearance: none;
     appearance: none;
 
@@ -276,12 +297,12 @@ onui-mulitslider-box .secondary {
     pointer-events: none;
     transform: translate(0, 5px);
 }
-onui-mulitslider-box .secondary {
+onui[type="range"] .onui-max {
     background: rgba(0,0,0,0);
 }
 
-onui-mulitslider-box .primary::-webkit-slider-thumb,
-onui-mulitslider-box .secondary::-webkit-slider-thumb {
+onui[type="range"] .onui-min::-webkit-slider-thumb,
+onui[type="range"] .onui-max::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
 

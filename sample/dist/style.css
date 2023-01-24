@@ -128,8 +128,10 @@ pre {
     color: #fff;
     background: #444;
     border-radius: 10px;
-    margin: 10px 0 50px 0;
     white-space: pre-wrap;
+}
+code {
+    font-size: 100%;
 }
 
 h1 {
@@ -141,7 +143,7 @@ h2 {
     color: #eee;
     margin: 50px 0 0px 0;
     padding: 3px 10px;
-    background: #222;
+    background: #333;
 }
 
 h3 {
@@ -159,7 +161,11 @@ h4 {
 
 div {
     color: #222;
-    margin: 10px 0 10px 0;
+    margin: 0;
+}
+
+.box {
+    margin: 10px 0 40px 0;
 }
 
 a {
@@ -170,4 +176,11 @@ a {
 
 a:hover {
     opacity: 0.5;
+}
+highlight {
+    display: inline;
+    color:rgb(255, 187, 62);
+}
+.console {
+    margin: 5px 0;
 }
