@@ -8,13 +8,13 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="./lib/prism.js" defer></script>
-    <script src="./onui.js"></script>
+    <script src="../../onui.js"></script>
     <script src="./js/vanilla.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/typescript.js"></script>
     <link rel="stylesheet" href="./lib/prism.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./onui.css">
+    <link rel="stylesheet" href="../../onui.css">
     <title>onUI - Sample</title>
 </head>
 
@@ -159,16 +159,22 @@
             <div class="box">
                 <h3 id="accordion-menu">Accordion Menu</h3>
                 <onui type="accordion">
-                    <option name="Item0">sample0 sample0 sample0 sample0 sample0</option>
-                    <option name="Item1">sample1 sample1 sample1 sample1 sample1</option>
-                    <option name="Item2">sample2 sample2 sample2 sample2 sample2</option>
+                    <option name="ac-item0" value="item0"></option>
+                    <option name="ac-item1" value="item1"></option>
+                    <option name="ac-item2" value="item2"></option>
                 </onui>
+                <div id="ac-item0">sample0 sample0 sample0 sample0 sample0</div>
+                <div id="ac-item1">sample1 sample1 sample1 sample1 sample1</div>
+                <div id="ac-item2">sample2 sample2 sample2 sample2 sample2</div>
 
-                <pre><code class="language-html"> &lt;onui type=&quot;accordion&quot;&gt;
-    &lt;option name=&quot;Item0&quot;&gt;sample0 sample0 sample0 sample0 sample0&lt;/option&gt;
-    &lt;option name=&quot;Item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/option&gt;
-    &lt;option name=&quot;Item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/option&gt;
-&lt;/onui&gt;</code></pre>
+                <pre><code class="language-html">&lt;onui type=&quot;accordion&quot;&gt;
+    &lt;option name=&quot;ac-item0&quot; value=&quot;item0&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;ac-item1&quot; value=&quot;item1&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;ac-item2&quot; value=&quot;item2&quot;&gt;&lt;/option&gt;
+&lt;/onui&gt;
+&lt;div id=&quot;ac-item0&quot;&gt;sample0 sample0 sample0 sample0 sample0&lt;/div&gt;
+&lt;div id=&quot;ac-item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/div&gt;
+&lt;div id=&quot;ac-item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/div&gt;</code></pre>
 
                 <div class="box">
                     <ul>
@@ -182,16 +188,22 @@
             <div class="box">
                 <h3 id="tab-menu">onui-tab</h3>
                 <onui type="tab">
-                    <option name="Item0">sample0 sample0 sample0 sample0 sample0</option>
-                    <option name="Item1">sample1 sample1 sample1 sample1 sample1</option>
-                    <option name="Item2">sample2 sample2 sample2 sample2 sample2</option>
+                    <option name="tab-item0" value="item0"></option>
+                    <option name="tab-item1" value="item1"></option>
+                    <option name="tab-item2" value="item2"></option>
                 </onui>
+                <div id="tab-item0">sample0 sample0 sample0 sample0 sample0</div>
+                <div id="tab-item1">sample1 sample1 sample1 sample1 sample1</div>
+                <div id="tab-item2">sample2 sample2 sample2 sample2 sample2</div>
 
                 <pre><code class="language-html">&lt;onui type=&quot;tab&quot;&gt;
-    &lt;option name=&quot;Item0&quot;&gt;sample0 sample0 sample0 sample0 sample0&lt;/option&gt;
-    &lt;option name=&quot;Item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/option&gt;
-    &lt;option name=&quot;Item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/option&gt;
-&lt;/onui&gt;</code></pre>
+    &lt;option name=&quot;tab-item0&quot; value=&quot;item0&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item1&quot; value=&quot;item1&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item2&quot; value=&quot;item2&quot;&gt;&lt;/option&gt;
+&lt;/onui&gt;
+&lt;div id=&quot;tab-item0&quot;&gt;sample0 sample0 sample0 sample0 sample0&lt;/div&gt;
+&lt;div id=&quot;tab-item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/div&gt;
+&lt;div id=&quot;tab-item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/div&gt;</code></pre>
 
                 <div class="box">
                     <ul>
@@ -356,11 +368,15 @@
             <div class="box">
                 <onui type="accordion"
                     style="background-color:dimgray; border-color: none; color: white; width: 500px; height: 20px; border-radius: 5px; text-align: center;">
-                    <option name="Item0" style="background: #ccc;">sample0 sample0 sample0 sample0 sample0</option>
-                    <option name="Item1" style="background: #ccc;" selected>sample1 sample1 sample1 sample1 sample1
-                    </option>
-                    <option name="Item2" style="background: #ccc;">sample2 sample2 sample2 sample2 sample2</option>
+                    <option name="ac-item0a" value="item0" style="background: #ccc;"></option>
+                    <option name="ac-item1a" value="item1" style="background: #ccc;" selected></option>
+                    <option name="ac-item2a" value="item2" style="background: #ccc;"></option>
                 </onui>
+                <div id="ac-item0a">sample0 sample0 sample0</div>
+                <div id="ac-item1a">sample1 sample1 sample1</div>
+                <div id="ac-item2a">sample2 sample2 sample2</div>
+
+                
                 <pre><code class="language-html">&lt;onui type=&quot;accordion&quot; style=&quot;background-color:dimgray; 
                                 border-color: none; 
                                 color: white; 
@@ -393,11 +409,16 @@
             <div class="box">
                 <onui type="tab"
                     style="background-color:whitesmoke; border-color: black; color: black; width: 500px; height: 20px; font-size: 12pt;">
-                    <option name="Item0">sample0 sample0 sample0 sample0 sample0</option>
-                    <option name="Item1">sample1 sample1 sample1 sample1 sample1</option>
-                    <option name="Item2" selected>sample2 sample2 sample2 sample2 sample2</option>
-                    <option name="Item3">sample3 sample3 sample3 sample3 sample3</option>
+                    <option name="tab-item0a" value="item0"></option>
+                    <option name="tab-item1a" value="item1"></option>
+                    <option name="tab-item2a" value="item2" selected></option>
+                    <option name="tab-item3a" value="item3"></option>
                 </onui>
+                <div id="tab-item0a">sample0 sample0 sample0</div>
+                <div id="tab-item1a">sample1 sample1 sample1</div>
+                <div id="tab-item2a">sample2 sample2 sample2</div>
+                <div id="tab-item3a">sample3 sample3 sample3</div>
+
                 <pre><code class="language-html">&lt;onui type=&quot;tab&quot; style=&quot;background-color:whitesmoke;
                         border-color: black; 
                         color: black; 
