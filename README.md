@@ -54,32 +54,26 @@ Just load the CSS and JS, and write the <onui> element.
 <img src="img/accordion.png" width='400px'><br>
 ```html
  <onui type="accordion">
-    <option name="Item0">
-        sample0 sample0 sample0 sample0 sample0
-    </option>
-    <option name="Item1">
-        sample1 sample1 sample1 sample1 sample1
-    </option>
-    <option name="Item2">
-        sample2 sample2 sample2 sample2 sample2
-    </option>
+    <option name="ac-item0" value="item0"></option>
+    <option name="ac-item1" value="item1"></option>
+    <option name="ac-item2" value="item2"></option>
 </onui>
+<div id="ac-item0">sample0 sample0 sample0 sample0 sample0</div>
+<div id="ac-item1">sample1 sample1 sample1 sample1 sample1</div>
+<div id="ac-item2">sample2 sample2 sample2 sample2 sample2</div>
 ```
 
 ## Tab Menu
 <img src="img/tab.png" width='400px'><br>
 ```html
 <onui type="tab">
-    <option name="Item0">
-        sample0 sample0 sample0 sample0 sample0
-    </option>
-    <option name="Item1">
-        sample1 sample1 sample1 sample1 sample1
-    </option>
-    <option name="Item2">
-        sample2 sample2 sample2 sample2 sample2
-    </option>
+    <option name="tab-item0" value="item0"></option>
+    <option name="tab-item1" value="item1"></option>
+    <option name="tab-item2" value="item2"></option>
 </onui>
+<div id="tab-item0">sample0 sample0 sample0 sample0 sample0</div>
+<div id="tab-item1">sample1 sample1 sample1 sample1 sample1</div>
+<div id="tab-item2">sample2 sample2 sample2 sample2 sample2</div>
 ```
 
 
