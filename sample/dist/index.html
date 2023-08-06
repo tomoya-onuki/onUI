@@ -12,6 +12,10 @@
     <script src="./js/vanilla.js"></script>
     <script src="./js/jquery.js"></script>
     <script src="./js/typescript.js"></script>
+    <script src="./js/clickCopy.js"></script>
+    <script src="./js/menu.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./lib/prism.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../onui.css">
@@ -23,28 +27,106 @@
     <label id="contentslist-open-button" for="contentslist-open"></label>
     <div id="contentslist">
         <ul>
-            <li><a href="#qs">Quick Start</a></li>
-            <ul>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#usage">Usage</a></li>
-            </ul>
-            <li><a href="#component">Component</a></li>
-            <ul>
-                <li><a href="#toggle-sw">Toggle switch</a></li>
-                <li><a href="#toggle-btn">Toggle button</a></li>
-                <li><a href="#slider">Multi slider</a></li>
-                <li><a href="#font-selector">Font selector</a></li>
-                <li><a href="#accordion-menu">Accordion</a></li>
-                <li><a href="#tab-menu">Tab</a></li>
-            </ul>
+            <div id="qs-menu">
+                <li><a href="#qs">Quick Start</a></li>
+                <ul class="sub-menu">
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                </ul>
+            </div>
+            <div id="toggle-sw-menu">
+                <li><a href="#toggle-sw">Toggle Switch</a></li>
+                <ul class="sub-menu">
+                    <li><a href="#toggle-sw-style">Style</a></li>
+                    <ul>
+                        <li><a href="#toggle-sw-style0">Style Tag</a></li>
+                        <li><a href="#toggle-sw-style1">Stylesheet</a></li>
+                    </ul>
+                    <li><a href="#toggle-sw-event">Event Listner</a></li>
+                    <ul>
+                        <li><a href="#toggle-sw-event0">Vanilla JS</a></li>
+                        <li><a href="#toggle-sw-event1">jQuery</a></li>
+                        <li><a href="#toggle-sw-event2">TypeScript</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div id="toggle-btn-menu">
+                <li><a href="#toggle-btn">Toggle Button</a></li>
+                <ul class="sub-menu">
+                    <li><a href="#toggle-btn-style">Style</a></li>
+                    <ul>
+                        <li><a href="#toggle-btn-style0">Style Attribute</a></li>
+                        <li><a href="#toggle-btn-style1">Stylesheet</a></li>
+                    </ul>
+                    <li><a href="#toggle-btn-event">Event Listner</a></li>
+                    <ul>
+                        <li><a href="#toggle-btn-event0">Vanilla JS</a></li>
+                        <li><a href="#toggle-btn-event1">jQuery</a></li>
+                        <li><a href="#toggle-btn-event2">TypeScript</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div id="slider-menu">
+                <li><a href="#slider">Multi Slider</a></li>
+                <ul class="sub-menu">
+                    <li><a href="#slider-style">Style</a></li>
+                    <ul>
+                        <li><a href="#slider-style0">Style Attribute</a></li>
+                        <li><a href="#slider-style1">Stylesheet</a></li>
+                    </ul>
+                    <li><a href="#slider-event">Event Listner</a></li>
+                    <ul>
+                        <li><a href="#slider-event0">Vanilla JS</a></li>
+                        <li><a href="#slider-event1">jQuery</a></li>
+                        <li><a href="#slider-event2">TypeScript</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div id="font-selector-menu">
+                <li><a href="#font-selector">Font Selector</a></li>
+                <ul class="sub-menu">
+                    <li><a href="#font-selector-style">Style</a></li>
+                    <ul>
+                        <li><a href="#font-selector-style0">Style Attribute</a></li>
+                        <li><a href="#font-selector-style1">Stylesheet</a></li>
+                    </ul>
+                    <li><a href="#font-selector-event">Event Listner</a></li>
+                    <ul>
+                        <li><a href="#font-selector-event0">Vanilla JS</a></li>
+                        <li><a href="#font-selector-event1">jQuery</a></li>
+                        <li><a href="#font-selector-event2">TypeScript</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div id="accordion-menu-menu">
+                <li><a href="#accordion-menu">Accordion Menu</a></li>
+                <ul class="sub-menu">
+                    <li><a href="#accordion-menu-style">Style</a></li>
+                    <ul>
+                        <li><a href="#accordion-menu-style0">Style Attribute</a></li>
+                        <li><a href="#accordion-menu-style1">Stylesheet</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div id="tab-menu-menu">
+                <li><a href="#tab-menu">Tab Menu</a></li>
+                <ul class="sub-menu">
+                    <li><a href="#tab-menu-style">Style</a></li>
+                    <ul>
+                        <li><a href="#tab-menu-style0">Style Attribute</a></li>
+                        <li><a href="#tab-menu-style1">Stylesheet</a></li>
+                    </ul>
+                </ul>
+            </div>
 
-            <li><a href="#style">Style</a></li>
+
+            <!-- <li><a href="#style">Style</a></li>
             <li><a href="#event">Event Lisnter</a></li>
             <ul>
                 <li><a href="#js">Vanilla JS</a></li>
                 <li><a href="#jquery">jQuery</a></li>
                 <li><a href="#ts">TypeScript</a></li>
-            </ul>
+            </ul> -->
         </ul>
 
         <div class="box"><a href="https://github.com/tomoya-onuki/onUI" target="_blank">GitHub</a></div>
@@ -62,7 +144,7 @@
                 <h3 id="download">Download</h3>
                 <ul>
                     <li>
-                        <a href="https://github.com/tomoya-onuki/onUI/blob/master/onui.css">onui.css (6KB)</a>
+                        <a href="https://github.com/tomoya-onuki/onUI/blob/master/onui.css">onui.(6KB)</a>
                     </li>
                     <li>
                         <a href="https://github.com/tomoya-onuki/onUI/blob/master/onui.js">onui.js (16KB)</a>
@@ -72,7 +154,9 @@
 
             <div class="box">
                 <h3 id="usage">Usage</h3>
-                <div class="box">Just load the CSS and JS, and write the &lt;onui&gt; element.</div>
+                <div class="box">Just load the and JS, and write the &lt;onui&gt; element.</div>
+
+
                 <pre><code class="language-html">&lt;head&gt;
     &lt;link rel=&quot;stylesheet&quot; href=&quot;onui.css&quot;&gt;
     &lt;script src=&quot;onui.js&quot;&gt;&lt;/script&gt;
@@ -81,20 +165,26 @@
 &lt;body&gt;
     &lt;onui&gt;&lt;/onui&gt;
 &lt;/body&gt;</code></pre>
+                <div class="copy-btn-box">
+                    <span class="copy-msg">copied!</span>
+                    <span class="copy-btn material-symbols-outlined">content_copy</span>
+                </div>
             </div>
         </div>
 
         <div class="box">
-            <h2 id="component">Component</h2>
-            <div class="box">Just specify the "type" attribute</div>
-
+            <h2 id="toggle-sw">Toggle Switch</h2>
             <div class="box">
-                <h3 id="toggle-sw">Toggle switch</h3>
                 <onui type="toggle-switch" id="toggle"></onui>
                 <label for="toggle">Toggle Switch</label>
 
                 <pre><code class="language-html">&lt;onui type=&quot;toggle-switch&quot; id=&quot;toggle&quot;&gt;&lt;/onui&gt;
 &lt;label for=&quot;toggle&quot;&gt;Toggle Switch&lt;/label&gt;</code></pre>
+
+                <div class="copy-btn-box">
+                    <span class="copy-msg">copied!</span>
+                    <span class="copy-btn material-symbols-outlined">content_copy</span>
+                </div>
 
                 <div class="box">
                     <ul>
@@ -102,36 +192,446 @@
                         <li>You can also use the &lt;label&gt; element.</li>
                     </ul>
                 </div>
+
+                <h3 id="toggle-sw-style">Style</h3>
+                <div class="box">
+                    <ul>
+                        <li>Add the "cheked" attribute when initializing in the selected state.</li>
+                        <li>Available properties for specifying style are "background-color", "color",
+                            "border-color", "border-radius", "border-style", "border-width", "accent-color", and
+                            "margin". </li>
+                        <ul>
+                            <li>"background-color" is the color of the background of the toggle switch when it is
+                                OFF.
+                            </li>
+                            <li>"border-color" is the color of the toggle switch outline.</li>
+                            <li>"color" is the color of the toggle switch knob.</li>
+                            <li>"border-radius" is radius of corners. When property is "border-radius: r0 r1", r0 is
+                                corners
+                                of outline and r1 is corners of knob.</li>
+                            <li>"accent-color" is the color of the background of the toggle switch when it is ON.
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <h4 id="toggle-sw-style0">Style Attribute</h4>
+                <div class="box">
+                    <onui type="toggle-switch" checked
+                        style="accent-color: orange; background-color:bisque; border: black 1px solid; color: black; border-radius: 2px 2px;">
+                    </onui>
+
+                    <pre><code class="language-html">&lt;onui type=&quot;toggle-switch&quot; checked
+                    style=&quot;background-color:bisque;
+                            border: black 1px solid;
+                            border-radius: 2px 2px;
+                            color: black;
+                            accent-color: orange;&quot;&gt;&lt;/onui&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="toggle-sw-style1">Stylesheet</h4>
+                <div class="box">
+                    <onui type="toggle-switch" checked class="style0"></onui>
+                    <style>
+                        .style0 {
+                            background-color: bisque;
+                            border: black 1px solid;
+                            border-radius: 2px 2px;
+                            color: black;
+                            accent-color: orange;
+                        }
+                    </style>
+
+                    <pre><code class="language-html">&lt;onui type=&quot;toggle-switch&quot; checked class=&quot;style0&quot;&gt;&lt;/onui&gt;
+&lt;style&gt;
+    .style0 {
+        background-color: bisque;
+        border: black 1px solid;
+        border-radius: 2px 2px;
+        color: black;
+        accent-color: orange;
+    }
+&lt;/style&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+
+                <h3 id="toggle-sw-event">Event Listner</h3>
+                <h4 id="toggle-sw-event0">Vanilla JS</h4>
+                <div class="box">
+                    <onui id="mytoggle" type="toggle-switch"></onui>
+                    <label for="mytoggle">My Toggle Switch</label>
+                    <div id="mytoggle-console" class="console">false</div>
+
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+    document.querySelector('#mytoggle')
+        .addEventListener('input', function (){
+                console.log(this.checked);
+        });
+});</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+                <h4 id="toggle-sw-event1">jQuery</h4>
+                <div class="box">
+                    <onui id="mytoggle1" type="toggle-switch"></onui>
+                    <label for="mytoggle1">My Toggle Switch</label>
+                    <div id="mytoggle1-console" class="console">false</div>
+
+                    <pre><code class="language-javascript">$(window).on('load', function() {
+    $('#mytoggle1').on('input', function () {
+        console.log($(this).prop('checked'));
+    });
+});</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+                <h4 id="toggle-sw-event2">TypeScript</h4>
+                <div class="box">
+                    <onui id="mytoggle2" type="toggle-switch"></onui>
+                    <label for="mytoggle">My Toggle Switch</label>
+                    <div id="mytoggle2-console" class="console">false</div>
+
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+    const mytoggle: HTMLInputElement = &lt;HTMLInputElement&gt;document.querySelector(&#039;#mytoggle2&#039;);
+    mytoggle.addEventListener(&#039;input&#039;, function (e) {
+        console.log(this.checked);
+    });
+});</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
             </div>
 
+            <h2 id="toggle-btn">Toggle Button</h2>
             <div class="box">
-                <h3 id="toggle-btn">Toggle Button</h3>
                 <onui type="toggle-btn">Toglle Button</onui>
                 <pre><code class="language-html">&lt;onui type=&quot;toggle-btn&quot;&gt;Toglle Button&lt;/onui&gt;</code></pre>
+
+                <div class="copy-btn-box">
+                    <span class="copy-msg">copied!</span>
+                    <span class="copy-btn material-symbols-outlined">content_copy</span>
+                </div>
 
                 <div class="box">
                     <ul>
                         <li>Type is toggle-btn.</li>
                     </ul>
                 </div>
+
+                <h3 id="toggle-btn-style">Style</h3>
+                <div class="box">
+                    <ul>
+                        <li>Available properties for specifying style are "background-color", "color",
+                            "border-color", "border-radius", "border-style", "border-width", "accent-color",
+                            "text-align", "font-size", "font-family", "width", "height", "padding" and
+                            "margin". </li>
+                        <ul>
+                            <li>Add the "cheked" attribute when initializing in the selected state.</li>
+                            <li>"background-color" is the color of the background of the toggle button when it is OFF.
+                            </li>
+                            <li>"border-color" is the color of the toggle button outline.</li>
+                            <li>"border-style" is the style of the outline.</li>
+                            <li>"border-radius" is rounds the corners of the outline.</li>
+                            <li>"border-width" is width of the outline.</li>
+                            <li>"color" is the color of the text.</li>
+                            <li>"accent-color" is the color of the background of the toggle button when it is ON.</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <h4 id="toggle-btn-style0">Style Attribute</h4>
+                <div class="box">
+                    <onui type="toggle-btn" checked
+                        style="accent-color: limegreen; background-color:gray; border: limegreen 3px solid; border-radius: 10px 0px; color: white; width: 60px; height: 60px; text-align: left; padding: 20px 10px 0 10px; font-size: 120%; font-family: serif;">
+                        Toggle Button</onui>
+                    <pre><code class="language-html">&lt;onui type=&quot;toggle-btn&quot; checked 
+                    style=&quot;background-color:gray; 
+                            border-color: limegreen; 
+                            border: limegreen 3px solid;
+                            border-style: solid; 
+                            color: white;
+                            accent-color: limegreen;
+                            width: 60px;
+                            height: 60px;
+                            text-align: left; 
+                            padding: 20px 10px 0 10px; 
+                            font-size: 120%; 
+                            font-family: serif;&quot;&gt;Toggle Button&lt;/onui&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="toggle-btn-style1">Stylesheet</h4>
+                <div class="box">
+                    <onui type="toggle-btn" checked class="style1">Toggle Button</onui>
+                    <style>
+                        .style1 {
+                            accent-color: limegreen;
+                            background-color: gray;
+                            border: limegreen 3px solid;
+                            border-radius: 10px 0px;
+                            color: white;
+                            width: 60px;
+                            height: 60px;
+                            text-align: left;
+                            padding: 20px 10px 0 10px;
+                            font-size: 120%;
+                            font-family: serif;
+                        }
+                    </style>
+
+                    <pre><code class="language-html">&lt;onui type=&quot;toggle-btn&quot; checked class=&quot;style1&quot;&gt;Toggle Button&lt;/onui&gt;
+&lt;style&gt;
+    .style1 {
+        accent-color: limegreen;
+        background-color: gray;
+        border: limegreen 3px solid;
+        border-radius: 10px 0px;
+        color: white;
+        width: 60px;
+        height: 60px;
+        text-align: left;
+        padding: 20px 10px 0 10px;
+        font-size: 120%;
+        font-family: serif;
+    }
+&lt;/style&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h3 id="toggle-btn-event">Event Listner</h3>
+                <h4 id="toggle-btn-event0">Vanilla JS</h4>
+                <div class="box">
+                    <onui type="toggle-btn" id="mytogglebtn">Toggle Button</onui>
+                    <div id="mytogglebtn-console" class="console">false</div>
+
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+    document.querySelector('#mytogglebtn')
+        .addEventListener('input', function (){
+            console.log(this.checked);
+        });
+});</code></pre>
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="toggle-btn-event1">jQuery</h4>
+                <div class="box">
+                    <onui type="toggle-btn" id="mytogglebtn1">Toggle Button</onui>
+                    <div id="mytogglebtn1-console" class="console">false</div>
+
+                    <pre><code class="language-javascript">$(window).on('load', function() {
+    $('#mytogglebtn1').on('input', function () {
+        console.log($(this).prop('checked'));
+    });
+});</code></pre>
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="toggle-btn-event2">TypeScript</h4>
+                <div class="box">
+                    <onui type="toggle-btn" id="mytogglebtn2">Toggle Button</onui>
+                    <div id="mytogglebtn2-console" class="console">false</div>
+
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+    const mytoggleBtn: HTMLInputElement = &lt;HTMLInputElement&gt;document.querySelector(&#039;#mytogglebtn2&#039;);
+    mytoggleBtn.addEventListener(&#039;input&#039;, function (e) {
+        console.log(this.checked);
+    });
+});</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
             </div>
 
+            <h2 id="slider">Multi Slider</h2>
             <div class="box">
-                <h3 id="slider">Multi Slider</h3>
                 <onui type="range"></onui>
 
                 <pre><code class="language-html">&lt;onui type=&quot;range&quot;&gt;&lt;/onui&gt;</code></pre>
+
+                <div class="copy-btn-box">
+                    <span class="copy-msg">copied!</span>
+                    <span class="copy-btn material-symbols-outlined">content_copy</span>
+                </div>
 
                 <div class="box">
                     <ul>
                         <li>Type is range.</li>
                     </ul>
                 </div>
+
+                <h3 id="slider-style">Style</h3>
+                <div class="box">
+                    <ul>
+                        <li>"min", "max", and "step" can be specified in the same way as the HTML standard &lt;input
+                            type="range"&gt; element.</li>
+                        <li>Available properties for specifying style are "background-color", "color","width",
+                            "height", and "margin". </li>
+                        <ul>
+                            <li>"value" is specified as "v0,v1". v0 is the smaller value and v1 is the larger value.
+                            </li>
+                            <li>"background-color" is the color of the background of the slider.</li>
+                            <li>"border-color" is the color of the knob outline.</li>
+                            <li>"color" is the color of the knob.</li>
+                            <li>"accent-color" is background color between knobs.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <h4 id="slider-style0">Style Attribute</h4>
+                <div class="box">
+                    <onui type="range" value="2,8" min="0" max="10" step="1"
+                        style="accent-color: crimson; background-color:#444; border-color: black; color: white; width: 300px; height: 5px;">
+                    </onui>
+                    <pre><code class="language-html">&lt;onui type=&quot;range&quot; value=&quot;2,8&quot; min="0" max="10" step="1" 
+                    style=&quot;background-color:black;
+                            border-color: black; 
+                            color: white; 
+                            accent-color: crimson;
+                            width: 300px; 
+                            height: 5px;&quot;&gt;&lt;/onui&gt;</code></pre>
+
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+                <h4 id="slider-style1">Stylesheet</h4>
+                <div class="box">
+                    <onui type="range" value="2,8" min="0" max="10" step="1" class="style2">
+                    </onui>
+                    <style>
+                        .style2 {
+                            background-color: #444;
+                            border-color: black;
+                            color: white;
+                            height: 5px;
+                            width: 300px;
+                            accent-color: crimson;
+                        }
+                    </style>
+
+                    <pre><code class="language-html">&lt;onui type=&quot;range&quot; value=&quot;2,8&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot; class=&quot;style2&quot;&gt;&lt;/onui&gt;
+&lt;style&gt;
+    .style2 {
+        background-color: black;
+        border-color: black;
+        color: white;
+        accent-color: crimson;
+        width: 300px;
+        height: 5px;
+    }
+&lt;/style&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+                <h3 id="slider-event">Event Listner</h3>
+                <h4 id="slider-event0">Vanilla JS</h4>
+                <div class="box">
+                    <onui id="myslider" type="range"></onui>
+                    <div id="myslider-console" class="console">0,100</div>
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+    var myslider =  document.querySelector('#myslider');
+
+    document.querySelector('#myslider > .onui-min')
+        .addEventListener('input', function (){
+            console.log(myslider.value);
+        });
+    document.querySelector('#myslider > .onui-max')
+        .addEventListener('input', function (){
+            console.log(myslider.value);
+        });
+});</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="slider-event1">jQuery</h4>
+                <div class="box">
+                    <onui id="myslider1" type="range"></onui>
+                    <div id="myslider1-console" class="console">0,100</div>
+
+                    <pre><code class="language-javascript">$(window).on('load', function() {
+    $('#myslider1 > .onui-min').on('input', function () {
+        console.log($('#myslider1').val());
+    });
+    $('#myslider1 > .onui-max').on('input', function () {
+        console.log($('#myslider1').val());
+    });
+});</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="slider-event2">TypeScript</h4>
+                <div class="box">
+                    <onui id="myslider2" type="range"></onui>
+                    <div id="myslider2-console" class="console">0,100</div>
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+    const myslider: HTMLInputElement = &lt;HTMLInputElement&gt;document.querySelector(&#039;#myslider2&#039;);
+    const mysliderMin: HTMLInputElement = &lt;HTMLInputElement&gt;myslider.querySelector(&#039;.onui-min&#039;);
+    const mysliderMax: HTMLInputElement = &lt;HTMLInputElement&gt;myslider.querySelector(&#039;.onui-max&#039;);
+    mysliderMin.addEventListener(&#039;input&#039;, function (e) {
+        console.log(myslider.value);
+    });
+    mysliderMax.addEventListener(&#039;input&#039;, function (e) {
+        console.log(myslider.value);
+    });
+});</code></pre>
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
             </div>
 
 
+            <h2 id="font-selector">Font Selector</h2>
             <div class="box">
-                <h3 id="font-selector">Font Selector</h3>
                 <onui type="font">
                     <option name="sans-serif"></option>
                     <option name="serif"></option>
@@ -146,6 +646,11 @@
     &lt;option name=&quot;Times New Roman&quot;&gt;&lt;/option&gt;
 &lt;/onui&gt;</code></pre>
 
+                <div class="copy-btn-box">
+                    <span class="copy-msg">copied!</span>
+                    <span class="copy-btn material-symbols-outlined">content_copy</span>
+                </div>
+
                 <div class="box">
                     <ul>
                         <li>Type is font.</li>
@@ -153,11 +658,163 @@
                             elements.</li>
                     </ul>
                 </div>
+
+                <h3 id="font-selector-style">Style</h3>
+                <div class="box">
+                    <ul>
+                        <li>Available properties for specifying style are "background-color", "color",
+                            "border-color", "border-radius", "border-style", "border-width", "accent-color",
+                            "text-align", "width", "height" and
+                            "margin". </li>
+                        <ul>
+                            <li>Add the "cheked" attribute when initializing in the selected state.</li>
+                            <li>"background-color" is the color of the background.</li>
+                            <li>"color" is the color of the text.</li>
+                            <li>"border-color" is the color of the outline.</li>
+                            <li>"border-style" is the style of the outline.</li>
+                            <li>"border-radius" is rounds the corners of the outline.</li>
+                            <li>"border-width" is width of the outline.</li>
+                            <li>"accent-color" is the color of the highlight when hovering the mouse over a choice.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <h4 id="font-selector-style0">Style Attribute</h4>
+                <div class="box">
+                    <onui type="font"
+                        style="accent-color: crimson; background-color:gray; border: dimgray ridge 3px; color: white; width: 200px; height: 20px; border-radius: 0px;">
+                        <option name="sans-serif"></option>
+                        <option name="serif"></option>
+                        <option name="Arial"></option>
+                        <option name="Times New Roman" selected></option>
+                    </onui>
+                    <pre><code class="language-html">&lt;onui type=&quot;font&quot; style=&quot;background-color:gray; 
+                            color: #eee;
+                            border: dimgray ridge 3px;
+                            border-radius: 0px;
+                            accent-color: crimson;
+                            width: 200px;
+                            height: 20px;&quot;&gt;
+        &lt;option name=&quot;sans-serif&quot;&gt;&lt;/option&gt;
+        &lt;option name=&quot;serif&quot;&gt;&lt;/option&gt;
+        &lt;option name=&quot;Arial&quot;&gt;&lt;/option&gt;
+        &lt;option name=&quot;Times New Roman&quot;&gt;&lt;/option&gt;
+&lt;/onui&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="font-selector-style1">Stylesheet</h4>
+                <div class="box">
+                    <onui type="font" class="style3">
+                        <option name="sans-serif"></option>
+                        <option name="serif"></option>
+                        <option name="Arial"></option>
+                        <option name="Times New Roman"></option>
+                    </onui>
+                    <style>
+                        .style3 {
+                            background-color: gray;
+                            color: #eee;
+                            border-radius: 0px;
+                            border: dimgray ridge 3px;
+                            accent-color: crimson;
+                            width: 200px;
+                            height: 20px;
+                        }
+                    </style>
+                    <pre><code class="language-html">&lt;onui type=&quot;font&quot; class=&quot;style3&quot;&gt;
+    &lt;option name=&quot;sans-serif&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;serif&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;Arial&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;Times New Roman&quot;&gt;&lt;/option&gt;
+&lt;/onui&gt;
+&lt;style&gt;
+    .style3 {
+        background-color:gray; 
+        color: white;
+        border: dimgray ridge 3px;
+        border-radius: 0px;
+        accent-color: crimson;
+        width: 200px;
+        height: 20px;
+    }
+&lt;/style&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+                <h3 id="font-selector-event">Event Listner</h3>
+                <h4 id="font-selector-event0">Vanilla JS</h4>
+                <div class="box">
+                    <onui id="myfontselector" type="font">
+                        <option name="Arial"></option>
+                        <option name="sans-serif"></option>
+                        <option name="serif"></option>
+                        <option name="Times New Roman"></option>
+                    </onui>
+                    <div id="myfontselector-console" class="console">sample</div>
+
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+    document.querySelector('#myfontselector > onui-list')
+        .addEventListener('click', function (){
+            console.log('%csample', `font-family:${this.value}`);
+        });
+});</code></pre>
+                </div>
+
+                <h4 id="font-selector-event1">jQuery</h4>
+                <div class="box">
+                    <onui id="myfontselector1" type="font">
+                        <option name="Arial"></option>
+                        <option name="sans-serif"></option>
+                        <option name="serif"></option>
+                        <option name="Times New Roman"></option>
+                    </onui>
+                    <div id="myfontselector1-console" class="console">sample</div>
+
+                    <pre><code class="language-javascript">$(window).on('load', function() {
+    $('#myfontselector1 > onui-options').on('click', function (e) {
+        console.log('%csample', `font-family:${$(this).attr('font')}`);
+    });
+});</code></pre>
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="font-selector-event2">TypeScript</h4>
+                <div class="box">
+                    <onui id="myfontselector2" type="font">
+                        <option name="Arial"></option>
+                        <option name="sans-serif"></option>
+                        <option name="serif"></option>
+                        <option name="Times New Roman"></option>
+                    </onui>
+                    <div id="myfontselector2-console" class="console">sample</div>
+
+                    <pre><code class="language-javascript">window.addEventListener('load', () => {
+const myfontselector: HTMLElement = &lt;HTMLElement&gt;document.querySelector(&#039;#myfontselector2 &gt; onui-options&#039;);
+    myfontselector.addEventListener(&#039;click&#039;, function (e) {
+        console.log(&#039;%csample&#039;, `font-family:${this.getComponent(&#039;font&#039;)}`);
+    });           
+});</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
             </div>
 
 
+            <h2 id="accordion-menu">Accordion Menu</h2>
             <div class="box">
-                <h3 id="accordion-menu">Accordion Menu</h3>
                 <onui type="accordion">
                     <option name="ac-item0" value="item0"></option>
                     <option name="ac-item1" value="item1"></option>
@@ -176,6 +833,11 @@
 &lt;div id=&quot;ac-item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/div&gt;
 &lt;div id=&quot;ac-item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/div&gt;</code></pre>
 
+                <div class="copy-btn-box">
+                    <span class="copy-msg">copied!</span>
+                    <span class="copy-btn material-symbols-outlined">content_copy</span>
+                </div>
+
                 <div class="box">
                     <ul>
                         <li>Type is accordion.</li>
@@ -183,10 +845,107 @@
                             elements.</li>
                     </ul>
                 </div>
+
+                <h3 id="accordion-menu-style">Style</h3>
+                <div class="box">
+                    <ul>
+                        <li>Add the "selected" attribute when initializing in the selected state.</li>
+                        <li>Available properties for specifying style are "background-color", "color",
+                            "border-color", "border-radius", "border-style", "border-width", "accent-color", "width",
+                            "height", "text-align", "font-family", "font-size", "padding", and
+                            "margin". </li>
+                    </ul>
+                </div>
+
+                <h4 id="accordion-menu-style0">Style Attribute</h4>
+                <div class="box">
+                    <onui type="accordion"
+                        style="background-color:dimgray; border-color: none; color: white; width: 500px; height: 20px; border-radius: 5px; text-align: center;">
+                        <option name="ac-item0a" value="item0" style="background: #ccc;"></option>
+                        <option name="ac-item1a" value="item1" style="background: #ccc;" selected></option>
+                        <option name="ac-item2a" value="item2" style="background: #ccc;"></option>
+                    </onui>
+                    <div id="ac-item0a">sample0 sample0 sample0</div>
+                    <div id="ac-item1a">sample1 sample1 sample1</div>
+                    <div id="ac-item2a">sample2 sample2 sample2</div>
+
+
+                    <pre><code class="language-html">&lt;onui type=&quot;accordion&quot; style=&quot;background-color:dimgray; 
+            border-color: none; 
+            color: white; 
+            width: 500px;
+            height: 20px; 
+            border-radius: 5px; 
+            text-align: center;&quot;&gt;
+    &lt;option name=&quot;ac-item0a&quot; value=&quot;item0&quot; style=&quot;background: #ccc;&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;ac-item1a&quot; value=&quot;item1&quot; style=&quot;background: #ccc;&quot; selected&gt;&lt;/option&gt;
+    &lt;option name=&quot;ac-item2a&quot; value=&quot;item2&quot; style=&quot;background: #ccc;&quot;&gt;&lt;/option&gt;
+&lt;/onui&gt;
+&lt;div id=&quot;ac-item0a&quot;&gt;sample0 sample0 sample0&lt;/div&gt;
+&lt;div id=&quot;ac-item1a&quot;&gt;sample1 sample1 sample1&lt;/div&gt;
+&lt;div id=&quot;ac-item2a&quot;&gt;sample2 sample2 sample2&lt;/div&gt;</code></pre>
+
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="accordion-menu-style1">Stylesheet</h4>
+                <div class="box">
+                    <onui type="accordion" class="style4">
+                        <option name="ac-item0b" value="item0" class="style4a"></option>
+                        <option name="ac-item1b" value="item1" class="style4a" selected></option>
+                        <option name="ac-item2b" value="item2" class="style4a"></option>
+                    </onui>
+                    <div id="ac-item0b">sample0 sample0 sample0</div>
+                    <div id="ac-item1b">sample1 sample1 sample1</div>
+                    <div id="ac-item2b">sample2 sample2 sample2</div>
+                    <style>
+                        .style4 {
+                            background-color: dimgray;
+                            border-color: none;
+                            color: white;
+                            width: 500px;
+                            height: 20px;
+                            border-radius: 5px;
+                            text-align: center;
+                        }
+
+                        .style4a {
+                            background-color: #ccc;
+                        }
+                    </style>
+
+                    <pre><code class="language-html">&lt;onui type=&quot;accordion&quot; class=&quot;style4&quot;&gt;
+    &lt;option name=&quot;ac-item0b&quot; value=&quot;item0&quot; class=&quot;style4a&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;ac-item1b&quot; value=&quot;item1&quot; class=&quot;style4a&quot; selected&gt;&lt;/option&gt;
+    &lt;option name=&quot;ac-item2b&quot; value=&quot;item2&quot; class=&quot;style4a&quot;&gt;&lt;/option&gt;
+&lt;/onui&gt;
+&lt;div id=&quot;ac-item0b&quot;&gt;sample0 sample0 sample0&lt;/div&gt;
+&lt;div id=&quot;ac-item1b&quot;&gt;sample1 sample1 sample1&lt;/div&gt;
+&lt;div id=&quot;ac-item2b&quot;&gt;sample2 sample2 sample2&lt;/div&gt;
+    .style4 {
+        background-color: dimgray;
+        border-color: none;
+        color: white;
+        width: 500px;
+        height: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+&lt;/style&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
             </div>
 
+            <h2 id="tab-menu">Tab Menu</h2>
             <div class="box">
-                <h3 id="tab-menu">onui-tab</h3>
                 <onui type="tab">
                     <option name="tab-item0" value="item0"></option>
                     <option name="tab-item1" value="item1"></option>
@@ -205,6 +964,11 @@
 &lt;div id=&quot;tab-item1&quot;&gt;sample1 sample1 sample1 sample1 sample1&lt;/div&gt;
 &lt;div id=&quot;tab-item2&quot;&gt;sample2 sample2 sample2 sample2 sample2&lt;/div&gt;</code></pre>
 
+
+                <div class="copy-btn-box">
+                    <span class="copy-msg">copied!</span>
+                    <span class="copy-btn material-symbols-outlined">content_copy</span>
+                </div>
                 <div class="box">
                     <ul>
                         <li>Type is tab.</li>
@@ -212,214 +976,32 @@
                             elements.</li>
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        <div class="box">
-            <h2 id="style">Style</h2>
-            <div class="box">
-                It can be controlled by writing css directly to the style properties. Loading external CSS may cause
-                layout corruption. (Deprecated)
-            </div>
-            <div class="box">
-                <onui type="toggle-switch" checked
-                    style="accent-color: orange; background-color:bisque; border-color: black; color: black; border-radius: 2px 2px;">
-                </onui>
-
-                <pre><code class="language-html">&lt;onui type=&quot;toggle-switch&quot; checked
-                    style=&quot;background-color:bisque;
-                            border-color: black; 
-                            border-radius: 2px 2px;
-                            color: black;
-                            accent-color: orange;&quot;&gt;&lt;/onui&gt;</code></pre>
-
-                <div class="box">
-                    <ul>
-                        <li>Add the "cheked" attribute when initializing in the selected state.</li>
-                        <li>Available CSS properties for specifying style are "background-color", "color",
-                            "border-color", "border-radius", "border-style", "border-width", "accent-color", and
-                            "margin". </li>
-                        <ul>
-                            <li>"background-color" is the color of the background of the toggle switch when it is OFF.
-                            </li>
-                            <li>"border-color" is the color of the toggle switch outline.</li>
-                            <li>"color" is the color of the toggle switch knob.</li>
-                            <li>"border-radius" is radius of corners. When property is "border-radius: r0 r1", r0 is
-                                corners
-                                of outline and r1 is corners of knob.</li>
-                            <li>"accent-color" is the color of the background of the toggle switch when it is ON.</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="box">
-                <onui type="toggle-btn" checked
-                    style="accent-color: limegreen; background-color:gray; border-color: limegreen; border-width: 3px; border-radius: 10px 0px; color: white; width: 60px; height: 60px; text-align: left; padding: 20px 10px 0 10px; font-size: 120%; font-family: serif;">
-                    Toggle Button</onui>
-                <pre><code class="language-html">&lt;onui type=&quot;toggle-btn&quot; checked 
-                    style=&quot;background-color:gray; 
-                            border-color: limegreen; 
-                            border-width: 3px; 
-                            border-radius: 10px 0px;
-                            border-style: solid; 
-                            color: white;
-                            accent-color: limegreen;
-                            width: 100px;
-                            height: 100px;
-                            text-align: left; 
-                            padding: 20px 10px 0 10px; 
-                            font-size: 120%; 
-                            font-family: serif;&quot;&gt;Toggle Button&lt;/onui&gt;</code></pre>
-                <div class="box">
-                    <ul>
-                        <li>Available CSS properties for specifying style are "background-color", "color",
-                            "border-color", "border-radius", "border-style", "border-width", "accent-color",
-                            "text-align", "font-size", "font-family", "width", "height", "padding" and
-                            "margin". </li>
-                        <ul>
-                            <li>Add the "cheked" attribute when initializing in the selected state.</li>
-                            <li>"background-color" is the color of the background of the toggle button when it is OFF.
-                            </li>
-                            <li>"border-color" is the color of the toggle button outline.</li>
-                            <li>"border-style" is the style of the outline.</li>
-                            <li>"border-radius" is rounds the corners of the outline.</li>
-                            <li>"border-width" is width of the outline.</li>
-                            <li>"color" is the color of the text.</li>
-                            <li>"accent-color" is the color of the background of the toggle button when it is ON.</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="box">
-                <onui type="range" value="2,8" min="0" max="10" step="1"
-                    style="accent-color: crimson; background-color:black; border-color: black; color: white; width: 300px; height: 5px;">
-                </onui>
-                <pre><code class="language-html">&lt;onui type=&quot;range&quot; value=&quot;2,8&quot; min="0" max="10" step="1" 
-                    style=&quot;background-color:black;
-                            border-color: black; 
-                            color: white; 
-                            accent-color: crimson;
-                            width: 300px; 
-                            height: 5px;&quot;&gt;&lt;/onui&gt;</code></pre>
-
-                <div class="box">
-                    <ul>
-                        <li>"min", "max", and "step" can be specified in the same way as the HTML standard &lt;input
-                            type="range"&gt; element.</li>
-                        <li>Available CSS properties for specifying style are "background-color", "color","width",
-                            "height", and "margin". </li>
-                        <ul>
-                            <li>"value" is specified as "v0,v1". v0 is the smaller value and v1 is the larger value.
-                            </li>
-                            <li>"background-color" is the color of the background of the slider.</li>
-                            <li>"border-color" is the color of the knob outline.</li>
-                            <li>"color" is the color of the knob.</li>
-                            <li>"accent-color" is background color between knobs.</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="box">
-                <onui type="font"
-                    style="accent-color: crimson; background-color:gray; border-color: dimgray; color: white; width: 200px; height: 20px; border-radius: 0px; border-style: ridge; border-width: 3px;">
-                    <option name="sans-serif"></option>
-                    <option name="serif"></option>
-                    <option name="Arial"></option>
-                    <option name="Times New Roman" selected></option>
-                </onui>
-                <pre><code class="language-html">&lt;onui type=&quot;font&quot; style=&quot;background-color:gray; 
-                            color: white;
-                            border-color: dimgray;
-                            border-radius: 0px;
-                            border-style: ridge;
-                            border-width: 3px;
-                            accent-color: crimson;
-                            width: 200px;
-                            height: 20px;&quot;&gt;
-        &lt;option name=&quot;sans-serif&quot;&gt;&lt;/option&gt;
-        &lt;option name=&quot;serif&quot;&gt;&lt;/option&gt;
-        &lt;option name=&quot;Arial&quot;&gt;&lt;/option&gt;
-        &lt;option name=&quot;Times New Roman&quot;&gt;&lt;/option&gt;
-&lt;/onui&gt;</code></pre>
-
-                <div class="box">
-                    <ul>
-                        <li>Available CSS properties for specifying style are "background-color", "color",
-                            "border-color", "border-radius", "border-style", "border-width", "accent-color",
-                            "text-align", "width", "height" and
-                            "margin". </li>
-                        <ul>
-                            <li>Add the "cheked" attribute when initializing in the selected state.</li>
-                            <li>"background-color" is the color of the background.</li>
-                            <li>"color" is the color of the text.</li>
-                            <li>"border-color" is the color of the outline.</li>
-                            <li>"border-style" is the style of the outline.</li>
-                            <li>"border-radius" is rounds the corners of the outline.</li>
-                            <li>"border-width" is width of the outline.</li>
-                            <li>"accent-color" is the color of the highlight when hovering the mouse over a choice.</li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="box">
-                <onui type="accordion"
-                    style="background-color:dimgray; border-color: none; color: white; width: 500px; height: 20px; border-radius: 5px; text-align: center;">
-                    <option name="ac-item0a" value="item0" style="background: #ccc;"></option>
-                    <option name="ac-item1a" value="item1" style="background: #ccc;" selected></option>
-                    <option name="ac-item2a" value="item2" style="background: #ccc;"></option>
-                </onui>
-                <div id="ac-item0a">sample0 sample0 sample0</div>
-                <div id="ac-item1a">sample1 sample1 sample1</div>
-                <div id="ac-item2a">sample2 sample2 sample2</div>
-
-                
-                <pre><code class="language-html">&lt;onui type=&quot;accordion&quot; style=&quot;background-color:dimgray; 
-                                border-color: none; 
-                                color: white; 
-                                width: 500px; 
-                                height: 20px;
-                                border-radius: 5px;
-                                text-align: center;&quot;&gt;
-        &lt;option name=&quot;Item0&quot; style=&quot;background: #ccc;&quot;&gt;
-            sample0 sample0 sample0 sample0 sample0
-        &lt;/option&gt;
-        &lt;option name=&quot;Item1&quot; style=&quot;background: #ccc;&quot;&gt;
-            sample1 sample1 sample1 sample1 sample1
-        &lt;/option&gt;
-        &lt;option name=&quot;Item2&quot; style=&quot;background: #ccc;&quot;&gt;
-            sample2 sample2 sample2 sample2 sample2
-        &lt;/option&gt;
-&lt;/onui&gt;</pre></code>
-
+                <h3 id="tab-menu-style">Style</h3>
                 <div class="box">
                     <ul>
                         <li>Add the "selected" attribute when initializing in the selected state.</li>
-                        <li>Available CSS properties for specifying style are "background-color", "color",
+                        <li>Available properties for specifying style are "background-color", "color",
                             "border-color", "border-radius", "border-style", "border-width", "accent-color", "width",
                             "height", "text-align", "font-family", "font-size", "padding", and
                             "margin". </li>
                     </ul>
                 </div>
-            </div>
+                <h4 id="tab-menu-style0">Style Attribute</h4>
+                <div class="box">
+                    <onui type="tab"
+                        style="background-color:whitesmoke; border-color: black; color: black; width: 500px; height: 20px; font-size: 12pt;">
+                        <option name="tab-item0a" value="item0"></option>
+                        <option name="tab-item1a" value="item1"></option>
+                        <option name="tab-item2a" value="item2" selected></option>
+                        <option name="tab-item3a" value="item3"></option>
+                    </onui>
+                    <div id="tab-item0a">sample0 sample0 sample0</div>
+                    <div id="tab-item1a">sample1 sample1 sample1</div>
+                    <div id="tab-item2a">sample2 sample2 sample2</div>
+                    <div id="tab-item3a">sample3 sample3 sample3</div>
 
-            <div class="box">
-                <onui type="tab"
-                    style="background-color:whitesmoke; border-color: black; color: black; width: 500px; height: 20px; font-size: 12pt;">
-                    <option name="tab-item0a" value="item0"></option>
-                    <option name="tab-item1a" value="item1"></option>
-                    <option name="tab-item2a" value="item2" selected></option>
-                    <option name="tab-item3a" value="item3"></option>
-                </onui>
-                <div id="tab-item0a">sample0 sample0 sample0</div>
-                <div id="tab-item1a">sample1 sample1 sample1</div>
-                <div id="tab-item2a">sample2 sample2 sample2</div>
-                <div id="tab-item3a">sample3 sample3 sample3</div>
-
-                <pre><code class="language-html">&lt;onui type=&quot;tab&quot; style=&quot;background-color:whitesmoke;
+                    <pre><code class="language-html">&lt;onui type=&quot;tab&quot; style=&quot;background-color:whitesmoke;
                         border-color: black; 
                         color: black; 
                         width: 500px; 
@@ -436,207 +1018,65 @@
         &lt;/option&gt;
 &lt;/onui&gt;</code></pre>
 
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
+                </div>
+
+                <h4 id="tab-menu-style1">Stylesheet</h4>
                 <div class="box">
-                    <ul>
-                        <li>Add the "selected" attribute when initializing in the selected state.</li>
-                        <li>Available CSS properties for specifying style are "background-color", "color",
-                            "border-color", "border-radius", "border-style", "border-width", "accent-color", "width",
-                            "height", "text-align", "font-family", "font-size", "padding", and
-                            "margin". </li>
-                    </ul>
+                    <onui type="tab" class="style5">
+                        <option name="Item0">
+                            sample0 sample0 sample0 sample0 sample0
+                        </option>
+                        <option name="Item1">
+                            sample1 sample1 sample1 sample1 sample1
+                        </option>
+                        <option name="Item2">
+                            sample2 sample2 sample2 sample2 sample2
+                        </option>
+                    </onui>
+                    <style>
+                        .style5 {
+                            background-color: whitesmoke;
+                            border-color: black;
+                            color: black;
+                            width: 500px;
+                            height: 20px;
+                            font-size: 12pt;
+                        }
+                    </style>
+
+                    <pre><code class="language-html">&lt;onui type=&quot;tab&quot; class=&quot;style5&quot;&gt;
+    &lt;option name=&quot;Item0&quot;&gt;
+        sample0 sample0 sample0 sample0 sample0
+    &lt;/option&gt;
+    &lt;option name=&quot;Item1&quot;&gt;
+        sample1 sample1 sample1 sample1 sample1
+    &lt;/option&gt;
+    &lt;option name=&quot;Item2&quot;&gt;
+        sample2 sample2 sample2 sample2 sample2
+    &lt;/option&gt;
+&lt;/onui&gt;
+&lt;style&gt;
+    .style5 {
+        background-color: whitesmoke;
+        border-color: black;
+        color: black;
+        width: 500px;
+        height: 20px;
+        font-size: 12pt;
+    }
+&lt;/style&gt;</code></pre>
+
+                    <div class="copy-btn-box">
+                        <span class="copy-msg">copied!</span>
+                        <span class="copy-btn material-symbols-outlined">content_copy</span>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="box">
-            <h2 id="event">Event Listner</h2>
-            <div class="box">You can get the event by writing javascript code.</div>
-            <div class="box">
-                <h3 id="js">Vanilla JS</h3>
-                <div class="box">
-                    <onui id="mytoggle" type="toggle-switch"></onui>
-                    <label for="mytoggle">My Toggle Switch</label>
-                    <div id="mytoggle-console" class="console">false</div>
-
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    document.querySelector('#mytoggle')
-        .addEventListener('input', function (){
-                console.log(this.checked);
-        });
-});</code></pre>
-                </div>
-
-                <div class="box">
-                    <onui type="toggle-btn" id="mytogglebtn">Toggle Button</onui>
-                    <div id="mytogglebtn-console" class="console">false</div>
-
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    document.querySelector('#mytogglebtn')
-        .addEventListener('input', function (){
-            console.log(this.checked);
-        });
-});</code></pre>
-
-                </div>
-
-                <div class="box">
-                    <onui id="myslider" type="range"></onui>
-                    <div id="myslider-console" class="console">0,100</div>
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    var myslider =  document.querySelector('#myslider');
-
-    document.querySelector('#myslider > .onui-min')
-        .addEventListener('input', function (){
-            console.log(myslider.value);
-        });
-    document.querySelector('#myslider > .onui-max')
-        .addEventListener('input', function (){
-            console.log(myslider.value);
-        });
-});</code></pre>
-                </div>
-
-                <div class="box">
-                    <onui id="myfontselector" type="font" style="width:160px">
-                        <option name="Arial"></option>
-                        <option name="sans-serif"></option>
-                        <option name="serif"></option>
-                        <option name="Times New Roman"></option>
-                    </onui>
-                    <div id="myfontselector-console" class="console">sample</div>
-
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    document.querySelector('#myfontselector > onui-list')
-        .addEventListener('click', function (){
-            console.log('%csample', `font-family:${this.value}`);
-        });
-});</code></pre>
-                </div>
-            </div>
-
-
-
-            <div class="box">
-                <h3 id="jquery">jQuery</h3>
-                <div class="box">
-                    <onui id="mytoggle1" type="toggle-switch"></onui>
-                    <label for="mytoggle1">My Toggle Switch</label>
-                    <div id="mytoggle1-console" class="console">false</div>
-
-                    <pre><code class="language-javascript">$(window).on('load', function() {
-    $('#mytoggle1').on('input', function () {
-        console.log($(this).prop('checked'));
-    });
-});</code></pre>
-                </div>
-
-                <div class="box">
-                    <onui type="toggle-btn" id="mytogglebtn1">Toggle Button</onui>
-                    <div id="mytogglebtn1-console" class="console">false</div>
-
-                    <pre><code class="language-javascript">$(window).on('load', function() {
-    $('#mytogglebtn1').on('input', function () {
-        console.log($(this).prop('checked'));
-    });
-});</code></pre>
-                </div>
-
-                <div class="box">
-                    <onui id="myslider1" type="range"></onui>
-                    <div id="myslider1-console" class="console">0,100</div>
-
-                    <pre><code class="language-javascript">$(window).on('load', function() {
-    $('#myslider1 > .onui-min').on('input', function () {
-        console.log($('#myslider1').val());
-    });
-    $('#myslider1 > .onui-max').on('input', function () {
-        console.log($('#myslider1').val());
-    });
-});</code></pre>
-                </div>
-
-                <div class="box">
-                    <onui id="myfontselector1" type="font" style="width:160px">
-                        <option name="Arial"></option>
-                        <option name="sans-serif"></option>
-                        <option name="serif"></option>
-                        <option name="Times New Roman"></option>
-                    </onui>
-                    <div id="myfontselector1-console" class="console">sample</div>
-
-                    <pre><code class="language-javascript">$(window).on('load', function() {
-    $('#myfontselector1 > onui-options').on('click', function (e) {
-        console.log('%csample', `font-family:${$(this).attr('font')}`);
-    });
-});</code></pre>
-                </div>
-            </div>
-
-
-
-            <div class="box">
-                <h3 id="ts">TypeScript</h3>
-                <div class="box">
-                    <onui id="mytoggle2" type="toggle-switch"></onui>
-                    <label for="mytoggle">My Toggle Switch</label>
-                    <div id="mytoggle2-console" class="console">false</div>
-
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    const mytoggle: HTMLInputElement = &lt;HTMLInputElement&gt;document.querySelector(&#039;#mytoggle2&#039;);
-    mytoggle.addEventListener(&#039;input&#039;, function (e) {
-        console.log(this.checked);
-    });
-});</code></pre>
-                </div>
-
-                <div class="box">
-                    <onui type="toggle-btn" id="mytogglebtn2">Toggle Button</onui>
-                    <div id="mytogglebtn2-console" class="console">false</div>
-
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    const mytoggleBtn: HTMLInputElement = &lt;HTMLInputElement&gt;document.querySelector(&#039;#mytogglebtn2&#039;);
-    mytoggleBtn.addEventListener(&#039;input&#039;, function (e) {
-        console.log(this.checked);
-    });
-});</code></pre>
-
-                </div>
-
-                <div class="box">
-                    <onui id="myslider2" type="range"></onui>
-                    <div id="myslider2-console" class="console">0,100</div>
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    const myslider: HTMLInputElement = &lt;HTMLInputElement&gt;document.querySelector(&#039;#myslider2&#039;);
-    const mysliderMin: HTMLInputElement = &lt;HTMLInputElement&gt;myslider.querySelector(&#039;.onui-min&#039;);
-    const mysliderMax: HTMLInputElement = &lt;HTMLInputElement&gt;myslider.querySelector(&#039;.onui-max&#039;);
-    mysliderMin.addEventListener(&#039;input&#039;, function (e) {
-        console.log(myslider.value);
-    });
-    mysliderMax.addEventListener(&#039;input&#039;, function (e) {
-        console.log(myslider.value);
-    });
-});</code></pre>
-                </div>
-
-                <div class="box">
-                    <onui id="myfontselector2" type="font" style="width:160px">
-                        <option name="Arial"></option>
-                        <option name="sans-serif"></option>
-                        <option name="serif"></option>
-                        <option name="Times New Roman"></option>
-                    </onui>
-                    <div id="myfontselector2-console" class="console">sample</div>
-
-                    <pre><code class="language-javascript">window.addEventListener('load', () => {
-    const myfontselector: HTMLElement = &lt;HTMLElement&gt;document.querySelector(&#039;#myfontselector2 &gt; onui-options&#039;);
-    myfontselector.addEventListener(&#039;click&#039;, function (e) {
-        console.log(&#039;%csample&#039;, `font-family:${this.getComponent(&#039;font&#039;)}`);
-    });           
-});</code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
 </body>
 

@@ -1,0 +1,65 @@
+.my-style0 {
+    background-color: bisque;
+    border-color: black;
+    border-radius: 2px 2px;
+    color: black;
+    accent-color: orange;
+}
+
+.my-style1 {
+    background-color: gray;
+    border-color: limegreen;
+    border-width: 3px;
+    border-radius: 10px 0px;
+    border-style: solid;
+    color: white;
+    accent-color: limegreen;
+    width: 100px;
+    height: 100px;
+    text-align: left;
+    padding: 20px 10px 0 10px;
+    font-size: 120%;
+    font-family: serif;
+}
+
+.my-style2 {
+    width: 300px;
+    height: 5px;
+    background-color: black;
+    border-color: black;
+    color: white;
+    accent-color: crimson;
+    /* accent-color: blue; */
+}
+
+.my-style3 {
+    background-color: gray;
+    color: white;
+    border-color: dimgray;
+    border-radius: 0px;
+    border-style: ridge;
+    border-width: 3px;
+    accent-color: crimson;
+    width: 200px;
+    height: 20px;
+}
+
+.my-style4 {
+    background-color: dimgray;
+    border-color: none;
+    color: white;
+    width: 500px;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center
+}
+
+.my-style5 {
+    background-color: whitesmoke;
+    border-color: black;
+    color: black;
+    width: 500px;
+    height: 20px;
+    font-size: 12pt;
+}
+

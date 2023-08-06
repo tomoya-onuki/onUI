@@ -46,31 +46,35 @@ class OnUI {
                 let check = $elem.getAttribute('checked')
                 $input.checked = check === 'checked' || check === '' ? true : false;;
 
+
+                const setStyle = (style) => {
+                    let baseFill = style.backgroundColor;
+                    let baseStroke = style.borderColor;
+                    let accentFill = style.accentColor;
+                    let accentStroke = style.accentColor;
+                    let thumb = style.color;
+                    let borderWidth = style.borderWidth;
+                    let borderRadius = style.borderTopLeftRadius;
+                    let thumbRadius = style.borderTopRightRadius;
+                    let margin = style.margin;
+
+                    this.#addStyle(`#${id} { margin: ${margin} } #${id}+label { border-color: ${baseStroke}; border-width: ${borderWidth}; border-radius: ${borderRadius}; background-color: ${baseFill}; } #${id}:checked+label { border: 1px solid ${accentStroke}; background-color: ${accentFill}; } #${id}+label>onui-thumb { background-color: ${thumb}; border: 1px solid ${thumb}; border-radius: ${thumbRadius}; } `);
+                };
+
                 if ($elem.style.length > 0) {
-                    let baseFill = $elem.style.backgroundColor;
-                    let baseStroke = $elem.style.borderColor;
-                    let accentFill = $elem.style.accentColor;
-                    let accentStroke = $elem.style.accentColor;
-                    let thumb = $elem.style.color;
-                    let borderWidth = $elem.style.borderWidth;
-                    let borderRadius = $elem.style.borderTopLeftRadius;
-                    let thumbRadius = $elem.style.borderTopRightRadius;
-                    let margin = $elem.style.margin;
-
-                    // if (baseFill === '') baseFill = '#aaa';
-                    // if (baseStroke === '') baseStroke = '#aaa';
-                    // if (thumb === '') thumb = '#FFF';
-                    // if (accentFill === '') accentFill = '#4287f5';
-                    // if (accentStroke === '') accentStroke = '#4287f5';
-                    // if (borderWidth === '') borderWidth = 1;
-                    // if (borderStyle === '') borderStyle = 'solid';
-                    // if (borderRadius === '') borderRadius = 10;
-                    // if (thumbRadius === '') thumbRadius = '100%';
-
-                    this.#addStyle(`#${id} { margin: ${margin} } #${id}+label { border-color: ${baseStroke}; border-width: ${borderWidth}; border-radius: ${borderRadius}; background-color: ${baseFill}; } #${id}:checked+label { border: 1px solid ${accentStroke}; background-color: ${accentFill}; } #${id}+label>onui-thumb { background-color: ${thumb}; border: 1px solid ${thumb}; border-radius: ${thumbRadius}; }`);
-
+                    setStyle($elem.style);
                     $elem.style = '';
                 }
+                else if ($elem.classList.length > 0) {
+                    let cssStyle = window.getComputedStyle($elem);
+
+                    setStyle(cssStyle);
+
+                    $elem.classList.forEach((value, key, listObj) => {
+                        $elem.classList.remove(value);
+                    });
+                }
+
 
                 $elem.removeAttribute('id');
 
@@ -111,41 +115,38 @@ class OnUI {
                 let check = $elem.getAttribute('checked')
                 $input.checked = check === 'checked' || check === '' ? true : false;;
 
+                const setStyle = (style) => {
+                    let baseFill = style.backgroundColor;
+                    let baseStroke = style.borderColor;
+                    let accentFill = style.accentColor;
+                    let accentStroke = style.accentColor;
+                    let text = style.color;
+                    let borderRadius = style.borderRadius;
+                    let borderStyle = style.borderStyle;
+                    let borderWidth = style.borderWidth;
+                    let width = style.width;
+                    let height = style.height;
+                    let textAlign = style.textAlign;
+                    let padding = style.padding;
+                    let fontSize = style.fontSize;
+                    let fontFamily = style.fontFamily;
+                    let margin = style.margin;
+
+                    this.#addStyle(`#${id} { margin: ${margin}; } #${id}+label { border-color:${baseStroke}; border-radius: ${borderRadius}; border-style: ${borderStyle}; border-width: ${borderWidth}; background-color: ${baseFill}; color : ${text}; font-size: ${fontSize}; font-family: ${fontFamily}; text-align: ${textAlign}; padding: ${padding}; width: ${width}; height: ${height}; }  #${id}:checked+label { border-color: ${accentStroke}; background-color: ${accentFill}; } `);
+                };
 
                 if ($elem.style.length > 0) {
-                    let baseFill = $elem.style.backgroundColor;
-                    let baseStroke = $elem.style.borderColor;
-                    let accentFill = $elem.style.accentColor;
-                    let accentStroke = $elem.style.accentColor;
-                    let text = $elem.style.color;
-                    let borderRadius = $elem.style.borderRadius;
-                    let borderStyle = $elem.style.borderStyle;
-                    let borderWidth = $elem.style.borderWidth;
-                    let width = $elem.style.width;
-                    let height = $elem.style.height;
-                    let textAlign = $elem.style.textAlign;
-                    let padding = $elem.style.padding;
-                    let fontSize = $elem.style.fontSize;
-                    let fontFamily = $elem.style.fontFamily;
-                    let margin = $elem.style.margin;
-
-                    // if (baseFill === '') baseFill = '#aaa';
-                    // if (baseStroke === '') baseStroke = '#aaa';
-                    // if (accentFill === '') accentFill = '#4287f5';
-                    // if (accentStroke === '') accentStroke = '#4287f5';
-                    // if (text === '') text = '#000';
-                    // if (borderRadius === '') borderRadius = '5px';
-                    // if (borderWidth === '') borderWidth = 1;
-                    // if (borderStyle === '') borderStyle = 'solid';
-                    // if (width === '') width = 'auto';
-                    // if (height === '') height = 20;
-                    // if (textAlign === '') textAlign = 'center';
-                    // if (padding === '') padding = '2px 5px 2px 5px';
-                    // if(fontSize === '') fontSize = '12px';
-
-                    this.#addStyle(`#${id} { margin: ${margin}; } #${id}+label { border-color:${baseStroke}; border-radius: ${borderRadius}; border-style: ${borderStyle}; border-width: ${borderWidth}; background-color: ${baseFill}; color : ${text}; font-size: ${fontSize}; font-family: ${fontFamily}; text-align: ${textAlign}; padding: ${padding}; width: ${width}; height: ${height}; }  #${id}:checked+label { border-color: ${accentStroke}; background-color: ${accentFill}; }`);
-
+                    setStyle($elem.style);
                     $elem.style = '';
+                }
+                else if ($elem.classList.length > 0) {
+                    let cssStyle = window.getComputedStyle($elem);
+
+                    setStyle(cssStyle);
+
+                    $elem.classList.forEach((value, key, listObj) => {
+                        $elem.classList.remove(value);
+                    });
                 }
 
                 $elem.removeAttribute('id');
@@ -211,34 +212,46 @@ class OnUI {
                 $elem.appendChild($label);
                 $elem.appendChild($list);
 
+                const setStyle = (style) => {
+                    let baseFill = style.backgroundColor;
+                    let baseStroke = style.borderColor;
+                    let accentFill = style.accentColor;
+                    let text = style.color;
+                    let width = style.width;
+                    let height = style.height;
+                    let borderWidth = style.borderWidth;
+                    let borderStyle = style.borderStyle;
+                    let borderRadius = style.borderRadius;
+                    let margin = style.margin;
+                    let textAlign = style.textAlign;
+
+                    if (baseFill === '') baseFill = '#FFF';
+                    if (baseStroke === '') baseStroke = '#000';
+                    if (accentFill === '') accentFill = '#4287f5';
+                    if (text === '') text = '#000';
+                    if (width === '') width = 120;
+                    if (height === '') height = 2;
+                    if (borderWidth === '') borderWidth = 1;
+                    if (borderStyle === '') borderStyle = 'solid';
+                    if (borderRadius === '') borderRadius = 5;
+
+                    this.#addStyle(`#${id} { margin: ${margin};  width : ${width}; height : ${height}; background: ${baseFill}; border-color: ${baseStroke}; border-width: ${borderWidth}; border-style: ${borderStyle}; border-radius: ${borderRadius}; } #${id} onui-label { background: ${baseFill}; color: ${text}; text-align: ${textAlign} } #${id} onui-down-btn { color : ${text}; } #${id} .onui-item:hover { background: ${accentFill}; } `);
+                }
 
                 if ($elem.style.length > 0) {
-                    let baseFill = $elem.style.backgroundColor;
-                    let baseStroke = $elem.style.borderColor;
-                    let accentFill = $elem.style.accentColor;
-                    let text = $elem.style.color;
-                    let width = $elem.style.width;
-                    let height = $elem.style.height;
-                    let borderWidth = $elem.style.borderWidth;
-                    let borderStyle = $elem.style.borderStyle;
-                    let borderRadius = $elem.style.borderRadius;
-                    let margin = $elem.style.margin;
-                    let textAlign = $elem.style.textAlign;
-
-                    // if (baseFill === '') baseFill = '#FFF';
-                    // if (baseStroke === '') baseStroke = '#000';
-                    // if (accentFill === '') accentFill = '#4287f5';
-                    // if (accentStroke === '') accentStroke = '#4287f5';
-                    // if (text === '') text = '#000';
-                    // if (width === '') width = 120;
-                    // if (height === '') height = 2;
-                    // if (borderWidth === '') borderWidth = 1;
-                    // if (borderStyle === '') borderStyle = 'solid';
-                    // if (borderRadius === '') borderRadius = 5;
-
-                    this.#addStyle(`#${id} { margin: ${margin};  width : ${width}; height : ${height}; background: ${baseFill}; border-color: ${baseStroke}; border-width: ${borderWidth}; border-style: ${borderStyle}; border-radius: ${borderRadius}; } #${id} onui-label { background: ${baseFill}; color: ${text}; text-align: ${textAlign} } #${id} onui-down-btn { color : ${text}; } #${id} .onui-item:hover { background: ${accentFill}; }`);
-
+                    setStyle($elem.style);
                     $elem.style = '';
+                }
+                else if ($elem.classList.length > 0) {
+                    let cssStyle = window.getComputedStyle($elem);
+                    setStyle(cssStyle);
+
+                    $elem.classList.forEach((value, key, listObj) => {
+                        $elem.classList.remove(value);
+                    });
+                }
+                else {
+                    this.#addStyle(`#${id} { width : 120px; height : 22px; background: #FFF; border: #000 1px solid; border-radius: 5px; }`);
                 }
 
                 const showList = () => {
@@ -268,6 +281,7 @@ class OnUI {
             });
 
     }
+
     #multiSlider() {
         document.querySelectorAll('onui[type="range"]')
             .forEach(($elem, idx) => {
@@ -315,27 +329,34 @@ class OnUI {
                 $elem.appendChild($slider1);
 
 
-                let accentColor = '#4287f5';
                 let baseColor = '#444';
+                let accentColor = '#4287f5';
+                const setStyle = (style) => {
+                    if (style.accentColor != '')
+                        accentColor = style.accentColor;
+                    if (style.backgroundColor != '')
+                        baseColor = style.backgroundColor;
+
+                    let thumbFill = style.color !== '' ? style.color : '#666';
+                    let thumbStroke = style.borderColor !== '' ? style.borderColor : '#666';
+                    let width = style.width !== '' ? style.width : 120;
+                    let height = style.height !== '' ? style.height : 2;
+                    let margin = style.margin !== '' ? style.margin : 0;
+
+                    this.#addStyle(`#${id} { margin: ${margin}; } #${id} .onui-min::-webkit-slider-thumb, #${id} .onui-max::-webkit-slider-thumb { border: 1px solid ${thumbStroke};  background-color: ${thumbFill}; } #${id} .onui-min, #${id} .onui-max { height : ${height}; width : ${width}; }`);
+                }
+
                 if ($elem.style.length > 0) {
-                    if ($elem.style.accentColor !== '')
-                        accentColor = $elem.style.accentColor;
-                    if ($elem.style.backgroundColor !== '')
-                        baseColor = $elem.style.backgroundColor;
-
-                    let thumbFill = $elem.style.color;
-                    let thumbStroke = $elem.style.borderColor;
-                    let width = $elem.style.width;
-                    let height = $elem.style.height;
-                    let margin = $elem.style.margin;
-                    if (thumbFill === '') thumbFill = '#666';
-                    if (thumbStroke === '') thumbStroke = '#666';
-                    if (width === '') width = 120;
-                    if (height === '') height = 2;
-
-                    this.#addStyle(`#${id} { margin: ${margin}; } #${id} .onui-min::-webkit-slider-thumb, #${id} .onui-max::-webkit-slider-thumb { border: 1px solid ${thumbStroke};  background-color: ${thumbFill}; } #${id} { width : ${width} } #${id} .onui-min, #${id} .onui-max { height : ${height} }`);
-
+                    setStyle($elem.style);
                     $elem.style = '';
+                }
+                else if ($elem.classList.length > 0) {
+                    let cssStyle = window.getComputedStyle($elem);
+                    setStyle(cssStyle);
+
+                    $elem.classList.forEach((value, key, listObj) => {
+                        $elem.classList.remove(value);
+                    });
                 }
 
                 updateSlider();
@@ -352,6 +373,7 @@ class OnUI {
 
                     let ratio0 = Math.round((vmin - min) / (max - min) * 100);
                     let ratio1 = Math.round((vmax - min) / (max - min) * 100);
+
 
                     $slider0.style.background = `linear-gradient(90deg, ${baseColor} ${ratio0}%, ${accentColor} ${ratio0}%, ${accentColor} ${ratio1}%, ${baseColor} ${ratio1}%)`;
                 }
@@ -376,7 +398,7 @@ class OnUI {
                 $elem.querySelectorAll('option')
                     .forEach(($option, idx) => {
                         $elem.appendChild($option);
-                        
+
                         let label = $option.value;
                         const $label = document.createElement('label');
                         $label.setAttribute('for', `${id}-hide-btn${idx}`);
@@ -396,7 +418,7 @@ class OnUI {
 
                         let name = $option.getAttribute('name');
                         let $item = document.querySelector(`#${name}`);
-                        if($item === null) $item = document.createElement('div');
+                        if ($item === null) $item = document.createElement('div');
                         $item.classList.add('onui-accordion-item');
 
                         $option.insertAdjacentElement("beforebegin", $label);
@@ -433,37 +455,50 @@ class OnUI {
                         });
                     });
 
+                const setStyle = (style) => {
+                    let width = style.width;
+                    let height = style.height;
+                    let margin = style.margin;
+                    let baseFill = style.backgroundColor;
+                    let borderColor = style.borderColor;
+                    let borderRadius = style.borderRadius;
+                    let borderStyle = style.borderStyle;
+                    let borderWidth = style.borderWidth;
+                    let text = style.color;
+                    let textAlign = style.textAlign;
+                    let padding = style.padding;
+                    let fontSize = style.fontSize;
+                    let fontFamily = style.fontFamily;
+
+                    if (baseFill === '') baseFill = '#FFF';
+                    if (text === '') text = '#000';
+                    if (width === '') width = 200;
+                    if (height === '') height = 10;
+                    if (borderStyle === '') borderStyle = 'solid';
+                    if (borderWidth === '') borderWidth = '1px';
+                    if (borderColor === '') borderColor = '#666';
+
+                    this.#addStyle(`#${id} { width : ${width}; height: ${height}; margin: ${margin}; } #${id} label { background: ${baseFill}; border-color: ${borderColor}; border-radius: ${borderRadius}; border-width: ${borderWidth}; border-style: ${borderStyle}; color: ${text}; font-size: ${fontSize}; font-family: ${fontFamily}; text-align :${textAlign}; padding: ${padding}} #${id} onui-hide-btn { color : ${text}; } `);
+                }
 
                 if ($elem.style.length > 0) {
-                    let baseFill = $elem.style.backgroundColor;
-                    let text = $elem.style.color;
-                    let baseStroke = $elem.style.borderColor;
-                    let borderRadius = $elem.style.borderRadius;
-                    let borderStyle = $elem.style.borderStyle;
-                    let borderWidth = $elem.style.borderWidth;
-                    let width = $elem.style.width;
-                    let height = $elem.style.height;
-                    let textAlign = $elem.style.textAlign;
-                    let padding = $elem.style.padding;
-                    let margin = $elem.style.margin;
-                    let fontSize = $elem.style.fontSize;
-                    let fontFamily = $elem.style.fontFamily;
-
-                    // if (baseFill === '') baseFill = '#FFF';
-                    // if (baseStroke === '') baseStroke = '#666';
-                    // if (text === '') text = '#000';
-                    // if (width === '') width = 120;
-                    // if (height === '') height = 2;
-
-                    this.#addStyle(`#${id} { width : ${width}; height: ${height}; margin: ${margin}; } #${id} label { background: ${baseFill}; border-color: ${baseStroke}; border-radius: ${borderRadius}; border-width: ${borderWidth}; border-style: ${borderStyle}; color: ${text}; font-size: ${fontSize}; font-family: ${fontFamily}; text-align :${textAlign}; padding: ${padding}} #${id} onui-hide-btn { color : ${text}; }`);
-
+                    setStyle($elem.style);
                     $elem.style = '';
+                }
+                else if ($elem.classList.length > 0) {
+                    let cssStyle = window.getComputedStyle($elem);
+                    setStyle(cssStyle);
+
+                    $elem.classList.forEach((value, key, listObj) => {
+                        $elem.classList.remove(value);
+                    });
+                }
+                else {
+                    this.#addStyle(`#${id} { width : 200px; }`);
                 }
             });
 
     }
-
-
 
     #tab() {
         document.querySelectorAll('onui[type="tab"]')
@@ -501,7 +536,7 @@ class OnUI {
 
                         let name = $option.getAttribute('name');
                         let $item = document.querySelector(`#${name}`);
-                        if($item === null) $item = document.createElement('div');
+                        if ($item === null) $item = document.createElement('div');
                         $item.classList.add('onui-tab-item');
                         $elem.appendChild($item);
 
@@ -561,6 +596,31 @@ class OnUI {
 
 
                     $elem.style = '';
+                } else if ($elem.classList.length > 0) {
+                    let cssStyle = window.getComputedStyle($elem);
+
+                    let baseFill = cssStyle.getPropertyValue('background-color');
+                    let baseStroke = cssStyle.getPropertyValue('border-color');
+                    let accentFill = cssStyle.getPropertyValue('accent-color');
+                    let accentStroke = cssStyle.getPropertyValue('accent-color');
+                    let borderWidth = cssStyle.getPropertyValue('border-width');
+                    let borderRadius = cssStyle.getPropertyValue('border-radius');
+                    let margin = cssStyle.getPropertyValue('margin');
+                    let text = cssStyle.getPropertyValue('color');
+                    let borderStyle = cssStyle.getPropertyValue('border-style');
+                    let width = cssStyle.getPropertyValue('width');
+                    let height = cssStyle.getPropertyValue('height');
+                    let textAlign = cssStyle.getPropertyValue('text-align');
+                    let padding = cssStyle.getPropertyValue('padding');
+                    let fontSize = cssStyle.getPropertyValue('font-size');
+                    let fontFamily = cssStyle.getPropertyValue('font-family');
+
+
+                    this.#addStyle(`#${id} { margin: ${margin}; } #${id}+label { border-color:${baseStroke}; border-radius: ${borderRadius}; border-style: ${borderStyle}; border-width: ${borderWidth}; background-color: ${baseFill}; color : ${text}; font-size: ${fontSize}; font-family: ${fontFamily}; text-align: ${textAlign}; padding: ${padding}; width: ${width}; height: ${height}; }  #${id}:checked+label { border-color: ${accentStroke}; background-color: ${accentFill}; } `);
+
+                    $elem.classList.forEach((value, key, listObj) => {
+                        $elem.classList.remove(value);
+                    });
                 }
             });
     }

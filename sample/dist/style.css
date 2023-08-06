@@ -21,11 +21,11 @@ body {
         user-select: none;
         background-color: rgb(34, 34, 34, 0.5);
         background-color: #eee;
-        padding: 10px 10px 10px 10px;
+        padding: 20px 10px 10px 10px;
         margin: 0;
-        top: 30px;
+        top: 8px;
         right: 20px;
-        color: #222;
+        color: #777;
         z-index: 2;
         width: 150px;
         display: none;
@@ -48,35 +48,39 @@ body {
 
     #contentslist-open-button {
         position: fixed;
-        top: 50px;
+        top: 25px;
         right: 40px;
-        width: 25px;
+        width: 26px;
         height: 10px;
         border-bottom: 1px solid #222;
         border-top: 1px solid #222;
         cursor: pointer;
         z-index: 3;
     }
+
     #contentslist-open:checked~#contentslist-open-button {
         border: none;
     }
-    #contentslist-open:checked~#contentslist-open-button::before, 
-    #contentslist-open:checked~#contentslist-open-button::after{
+
+    #contentslist-open:checked~#contentslist-open-button::before,
+    #contentslist-open:checked~#contentslist-open-button::after {
         content: "";
         display: block;
-        width: 100%;/*バツ線の長さ*/
-        height: 1px;/*バツ線の太さ*/
+        width: 100%;
+        /*バツ線の長さ*/
+        height: 1px;
+        /*バツ線の太さ*/
         background: #222;
         transform: rotate(45deg);
-        transform-origin:0% 50%;
+        transform-origin: 0% 50%;
         position: absolute;
         top: calc(14% - 5px);
         left: 14%;
     }
-    
-    #contentslist-open:checked~#contentslist-open-button::after{
+
+    #contentslist-open:checked~#contentslist-open-button::after {
         transform: rotate(-45deg);
-        transform-origin:100% 50%;
+        transform-origin: 100% 50%;
         left: auto;
         right: 14%;
     }
@@ -104,6 +108,7 @@ body {
         left: calc(50% - 490px);
         color: #222;
     }
+
     #contentslist-open-button {
         display: none;
     }
@@ -119,6 +124,25 @@ ul {
 
 li {
     margin-bottom: 0.7em;
+    color: #aaa;
+}
+
+a {
+    color: #aaa;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.sub-menu {
+    display: none;
+    color: #222;
+}
+.sub-menu a {
+    color: #222;
 }
 
 
@@ -130,6 +154,7 @@ pre {
     border-radius: 10px;
     white-space: pre-wrap;
 }
+
 code {
     font-size: 100%;
 }
@@ -141,22 +166,23 @@ h1 {
 
 h2 {
     color: #eee;
-    margin: 50px 0 0px 0;
-    padding: 3px 10px;
+    margin: 80px 0 0px 0;
+    padding: 6px 10px;
     background: #333;
 }
 
 h3 {
     color: #222;
     margin: 30px 0 10px 0;
-    padding: 0 0 5px 0;
-    border: none;
-    border-bottom: 1px #222 solid;
+    padding: 0 0 0 6px;
+    border-left: #222 8px solid;
 }
 
 h4 {
     color: #222;
     margin: 20px 0 0 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px #222 solid;
 }
 
 div {
@@ -168,19 +194,33 @@ div {
     margin: 10px 0 40px 0;
 }
 
-a {
-    color: #222;
-    text-decoration: none;
-    word-break: break-all;
-}
 
-a:hover {
-    opacity: 0.5;
-}
+
 highlight {
     display: inline;
-    color:rgb(255, 187, 62);
+    color: rgb(255, 187, 62);
 }
+
 .console {
     margin: 5px 0;
+}
+
+
+.copy-btn-box {
+    position: absolute;
+    right: 0px;
+    transform: translate(-15px, -55px);
+    cursor: pointer;
+    color: #222;
+}
+.copy-btn {
+    font-variation-settings:
+        'FILL'0,
+        'wght'300,
+        'GRAD'0,
+        'opsz'24;
+    transform: translate(0, 7px);
+}
+.copy-msg {
+    display: none;
 }

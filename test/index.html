@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../onui.js"></script>
+    <link rel="stylesheet" href="../../onui.css">
+    <link rel="stylesheet" href="style.css">
+    <title>dev - onUI</title>
+    
+</head>
+
+<body>
+    <div id="t" class="test"></div>
+    <style>
+        .test {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        let t = document.querySelector('#t');
+        let css = window.getComputedStyle(t);
+        console.log(css.width, css.height)
+    </script>
+
+    <onui type="toggle-switch" class="my-style0" checked></onui>
+    <onui type="toggle-btn" class="my-style1" checked>Toggle Button</onui>
+    
+    <onui type="range" value="2,8" min="0" max="10" step="1" 
+                    style="background-color:#444;
+                            border-color: black; 
+                            color: white; 
+                            accent-color: crimson;
+                            width: 300px; 
+                            height: 5px;"></onui>
+<onui type="range" value="2,8" min="0" max="10" step="1" class="my-style2"></onui>
+    <onui type="font" class="my-style3">
+        <option name="sans-serif"></option>
+        <option name="serif"></option>
+        <option name="Arial"></option>
+        <option name="Times New Roman"></option>
+    </onui>
+    <onui type="font" style="background-color:gray; 
+                            color: white;
+                            border-color: dimgray;
+                            border-radius: 0px;
+                            border-style: ridge;
+                            border-width: 3px;
+                            accent-color: crimson;
+                            width: 200px;
+                            height: 20px;">
+        <option name="sans-serif"></option>
+        <option name="serif"></option>
+        <option name="Arial"></option>
+        <option name="Times New Roman"></option>
+</onui>
+    <!-- <onui type="accordion" class="my-style4">
+        <option name="Item0" style="background: #ccc;">
+            sample0 sample0 sample0 sample0 sample0
+        </option>
+        <option name="Item1" style="background: #ccc;">
+            sample1 sample1 sample1 sample1 sample1
+        </option>
+        <option name="Item2" style="background: #ccc;">
+            sample2 sample2 sample2 sample2 sample2
+        </option>
+    </onui> -->
+    <!-- <onui type="tab" class="my-style5">
+        <option name="Item0">
+            sample0 sample0 sample0 sample0 sample0
+        </option>
+        <option name="Item1">
+            sample1 sample1 sample1 sample1 sample1
+        </option>
+        <option name="Item2">
+            sample2 sample2 sample2 sample2 sample2
+        </option>
+</onui> -->
+
+</body>
+
+</html>
