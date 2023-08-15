@@ -1001,22 +1001,16 @@ const myfontselector: HTMLElement = &lt;HTMLElement&gt;document.querySelector(&#
                     <div id="tab-item2a">sample2 sample2 sample2</div>
                     <div id="tab-item3a">sample3 sample3 sample3</div>
 
-                    <pre><code class="language-html">&lt;onui type=&quot;tab&quot; style=&quot;background-color:whitesmoke;
-                        border-color: black; 
-                        color: black; 
-                        width: 500px; 
-                        height: 20px;
-                        font-size: 12pt;&quot;&gt;
-        &lt;option name=&quot;Item0&quot;&gt;
-            sample0 sample0 sample0 sample0 sample0
-        &lt;/option&gt;
-        &lt;option name=&quot;Item1&quot;&gt;
-            sample1 sample1 sample1 sample1 sample1
-        &lt;/option&gt;
-        &lt;option name=&quot;Item2&quot;&gt;
-            sample2 sample2 sample2 sample2 sample2
-        &lt;/option&gt;
-&lt;/onui&gt;</code></pre>
+                    <pre><code class="language-html">&lt;onui type=&quot;tab&quot; style=&quot;background-color:whitesmoke; border-color: black; color: black; width: 500px; height: 20px; font-size: 12pt;&quot;&gt;
+    &lt;option name=&quot;tab-item0a&quot; value=&quot;item0&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item1a&quot; value=&quot;item1&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item2a&quot; value=&quot;item2&quot; selected&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item3a&quot; value=&quot;item3&quot;&gt;&lt;/option&gt;
+&lt;/onui&gt;
+&lt;div id=&quot;tab-item0a&quot;&gt;sample0 sample0 sample0&lt;/div&gt;
+&lt;div id=&quot;tab-item1a&quot;&gt;sample1 sample1 sample1&lt;/div&gt;
+&lt;div id=&quot;tab-item2a&quot;&gt;sample2 sample2 sample2&lt;/div&gt;
+&lt;div id=&quot;tab-item3a&quot;&gt;sample3 sample3 sample3&lt;/div&gt;</code></pre>
 
                     <div class="copy-btn-box">
                         <span class="copy-msg">copied!</span>
@@ -1027,16 +1021,15 @@ const myfontselector: HTMLElement = &lt;HTMLElement&gt;document.querySelector(&#
                 <h4 id="tab-menu-style1">Stylesheet</h4>
                 <div class="box">
                     <onui type="tab" class="style5">
-                        <option name="Item0">
-                            sample0 sample0 sample0 sample0 sample0
-                        </option>
-                        <option name="Item1">
-                            sample1 sample1 sample1 sample1 sample1
-                        </option>
-                        <option name="Item2">
-                            sample2 sample2 sample2 sample2 sample2
-                        </option>
+                        <option name="tab-item0b" value="item0"></option>
+                        <option name="tab-item1b" value="item1"></option>
+                        <option name="tab-item2b" value="item2" selected></option>
+                        <option name="tab-item3b" value="item3"></option>
                     </onui>
+                    <div id="tab-item0b">sample0 sample0 sample0</div>
+                    <div id="tab-item1b">sample1 sample1 sample1</div>
+                    <div id="tab-item2b">sample2 sample2 sample2</div>
+                    <div id="tab-item3b">sample3 sample3 sample3</div>
                     <style>
                         .style5 {
                             background-color: whitesmoke;
@@ -1049,16 +1042,15 @@ const myfontselector: HTMLElement = &lt;HTMLElement&gt;document.querySelector(&#
                     </style>
 
                     <pre><code class="language-html">&lt;onui type=&quot;tab&quot; class=&quot;style5&quot;&gt;
-    &lt;option name=&quot;Item0&quot;&gt;
-        sample0 sample0 sample0 sample0 sample0
-    &lt;/option&gt;
-    &lt;option name=&quot;Item1&quot;&gt;
-        sample1 sample1 sample1 sample1 sample1
-    &lt;/option&gt;
-    &lt;option name=&quot;Item2&quot;&gt;
-        sample2 sample2 sample2 sample2 sample2
-    &lt;/option&gt;
+    &lt;option name=&quot;tab-item0b&quot; value=&quot;item0&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item1b&quot; value=&quot;item1&quot;&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item2b&quot; value=&quot;item2&quot; selected&gt;&lt;/option&gt;
+    &lt;option name=&quot;tab-item3b&quot; value=&quot;item3&quot;&gt;&lt;/option&gt;
 &lt;/onui&gt;
+&lt;div id=&quot;tab-item0b&quot;&gt;sample0 sample0 sample0&lt;/div&gt;
+&lt;div id=&quot;tab-item1b&quot;&gt;sample1 sample1 sample1&lt;/div&gt;
+&lt;div id=&quot;tab-item2b&quot;&gt;sample2 sample2 sample2&lt;/div&gt;
+&lt;div id=&quot;tab-item3b&quot;&gt;sample3 sample3 sample3&lt;/div&gt;
 &lt;style&gt;
     .style5 {
         background-color: whitesmoke;

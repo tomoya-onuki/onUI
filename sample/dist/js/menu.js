@@ -15,8 +15,8 @@ window.addEventListener('load', () => {
                     // $box.querySelector('li > a').style.color = '#3d98ff';
                     $box.querySelector('.sub-menu').style.display = 'block';
                 } else {
-                    $box.querySelector('li > a').style.color = '#aaa';
-                    $box.querySelector('li').style.color = '#aaa';
+                    $box.querySelector('li > a').style.color = '#999';
+                    $box.querySelector('li').style.color = '#999';
                     $box.querySelector('.sub-menu').style.display = 'none';
                 }
             } catch (e) {
